@@ -17,7 +17,8 @@ Use of networked virtual machines/bare-metal computers is recommended.
 When a node is down, on the features supported by that node should stop working, but the rest of the application should still work.
 
 #### Bonus
-> Implementation of redundant database / persistence layer.
+> Implementation of redundant database / persistence layer
+
 > Implementation of more features on its own node.
 
 ---
