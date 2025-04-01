@@ -28,5 +28,5 @@ When a node is down, on the features supported by that node should stop working,
 - Source code + build/compilation steps
 - Slides containing the following:
 
-**Key implementation steps**
+**Key implementation steps** <br>
 Explanations on how fault tolerance is achieved
