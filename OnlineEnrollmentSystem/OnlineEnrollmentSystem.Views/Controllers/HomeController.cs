@@ -21,7 +21,7 @@ namespace OnlineEnrollmentSystem.Controllers
         [HttpPost]  
         public IActionResult Login(UserModel loginRequest)  
         {  
-            // For simplicity, just validate hardcoded credentials  
+            // For simplicity, just validate hardcoded credentials for now
             if (loginRequest.Username == "student" && loginRequest.Password == "password")  
             {  
                 // Store user session (demo only, no real authentication yet)  
