@@ -31,30 +31,42 @@ namespace OnlineEnrollmentSystem.Controllers
 
             ModelState.AddModelError(string.Empty, "Invalid credentials.");  
             return View();  
-        }  
+        }
 
-        // GET: /Home/Courses  
-        public IActionResult Courses()  
-        {  
-            // Mock API response for available courses  
-            List<CourseModel> courses = new List<CourseModel>  
-            {  
-                new CourseModel { Id = 1, Name = "ST-MATH", IsEnrolled = false },  
-                new CourseModel { Id = 2, Name = "ST-INTSY", IsEnrolled = true }  
-            };  
-            return View(courses);  
-        }  
+		// GET: /Home/Courses  
+		public IActionResult Courses()
+		{
+			var courses = new List<CourseModel>
+	        {
+		        new CourseModel { Id = 1, InstructorId = 1, CourseCode = "ST-MATH", Units = 3, Capacity = 40 },
+		        new CourseModel { Id = 2, InstructorId = 2, CourseCode = "ST-INTSY", Units = 3, Capacity = 40 }
+	        };
 
-        // GET: /Home/Grades  
-        public IActionResult Grades()  
+			var enrollments = new List<EnrollmentModel>
+	        {
+		        new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseName = "ST-MATH", Grade = "3.0" }
+	        };
+
+			var viewModel = new CourseListViewModel
+			{
+			    Courses = courses,
+			    Enrollments = enrollments
+			};
+
+			return View(viewModel);
+		}
+
+
+		// GET: /Home/Grades  
+		public IActionResult Grades()  
         {  
             // Mock grades for demonstration  
-            List<GradeModel> grades = new List<GradeModel>  
-            {  
-                new GradeModel { CourseName = "ST-MATH", Grade = "3.0" },  
-                new GradeModel { CourseName = "ST-INTSY", Grade = "2.5" }  
-            };  
+            List<EnrollmentModel> grades = new List<EnrollmentModel>  
+            {
+				new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseName = "ST-MATH", Grade = "3.0" },
+				new EnrollmentModel { Id = 2, StudentId = 1, CourseId = 2, CourseName = "ST-INTSY", Grade = "2.5" }
+			};  
             return View(grades);  
-        }  
+        }
     }  
 }
