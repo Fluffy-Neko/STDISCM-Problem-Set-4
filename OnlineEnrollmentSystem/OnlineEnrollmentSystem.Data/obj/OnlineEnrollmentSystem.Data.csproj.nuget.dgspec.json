@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {}
+    "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
+    "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
         "projectName": "OnlineEnrollmentSystem.Data",
-        "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
-        "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\obj\\",
+        "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
+        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\chris\\Documents\\Michel-Andre-Application-main\\HRMS\\packages\\Apitron.PDF.Controls.1.0.170": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
