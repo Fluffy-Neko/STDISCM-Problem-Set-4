@@ -1,29 +1,38 @@
+using OnlineEnrollmentSystem.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Register DbContext with MySQL connection
+builder.Services.AddDbContext<AppDbContext>(options =>
+	options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+	app.UseExceptionHandler("/Home/Error");
+	app.UseHsts();  // Enforces HTTP Strict Transport Security (HSTS) in production
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();  // Serve static files such as CSS, JS, Images, etc.
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapStaticAssets();
+// Map default controller route
+app.MapControllerRoute(
+	name: "default",
+	pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+	name: "courses",
+	pattern: "{controller=Courses}/{action=Index}/{id?}"
+);
 
 app.Run();

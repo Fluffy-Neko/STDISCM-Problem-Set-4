@@ -25,36 +25,37 @@ namespace OnlineEnrollmentSystem.Controllers
             if (loginRequest.Username == "student" && loginRequest.Password == "password")  
             {  
                 // Store user session (demo only, no real authentication yet)  
-                TempData["UserName"] = loginRequest.Username;  
-                return RedirectToAction("Courses");  
-            }  
+                TempData["UserName"] = loginRequest.Username;
+				return RedirectToAction("View", "Courses");
+			}  
 
             ModelState.AddModelError(string.Empty, "Invalid credentials.");  
             return View();  
         }
 
 		// GET: /Home/Courses  
-		public IActionResult Courses()
-		{
-			var courses = new List<CourseModel>
-	        {
-		        new CourseModel { Id = 1, InstructorId = 1, CourseCode = "ST-MATH", Units = 3, Capacity = 40 },
-		        new CourseModel { Id = 2, InstructorId = 2, CourseCode = "ST-INTSY", Units = 3, Capacity = 40 }
-	        };
+		//public IActionResult Courses()
+		//{
+		//	var courses = new List<CourseModel>
+		//       {
+		//        new CourseModel { Id = 1, InstructorId = 1, CourseCode = "ST-MATH", Units = 3, Capacity = 40 },
+		//        new CourseModel { Id = 2, InstructorId = 2, CourseCode = "ST-INTSY", Units = 3, Capacity = 40 },
+		//		new CourseModel { Id = 3, InstructorId = 3, CourseCode = "CS-OPESY", Units = 3, Capacity = 40 }
+		//	};
 
-			var enrollments = new List<EnrollmentModel>
-	        {
-		        new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseName = "ST-MATH", Grade = "3.0" }
-	        };
+		//	var enrollments = new List<EnrollmentModel>
+		//       {
+		//        new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseName = "ST-MATH", Grade = "3.0" }
+		//       };
 
-			var viewModel = new CourseListViewModel
-			{
-			    Courses = courses,
-			    Enrollments = enrollments
-			};
+		//	var viewModel = new CourseListViewModel
+		//	{
+		//	    Courses = courses,
+		//	    Enrollments = enrollments
+		//	};
 
-			return View(viewModel);
-		}
+		//	return View(viewModel);
+		//}
 
 
 		// GET: /Home/Grades  
