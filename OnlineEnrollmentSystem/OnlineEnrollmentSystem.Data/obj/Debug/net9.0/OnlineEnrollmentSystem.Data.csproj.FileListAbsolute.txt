@@ -1,0 +1,12 @@
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.deps.json
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.dll
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.pdb
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.AssemblyInfoInputs.cache
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.AssemblyInfo.cs
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.sourcelink.json
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.dll
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.Data.dll
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.pdb
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.Data.dll

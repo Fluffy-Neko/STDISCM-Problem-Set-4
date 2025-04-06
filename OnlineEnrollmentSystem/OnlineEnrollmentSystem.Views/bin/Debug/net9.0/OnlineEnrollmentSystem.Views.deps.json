@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "OnlineEnrollmentSystem.Views/1.0.0": {
+        "dependencies": {
+          "OnlineEnrollmentSystem.API": "1.0.0",
+          "OnlineEnrollmentSystem.Auth": "1.0.0",
+          "OnlineEnrollmentSystem.Data": "1.0.0"
+        },
+        "runtime": {
+          "OnlineEnrollmentSystem.Views.dll": {}
+        }
+      },
+      "OnlineEnrollmentSystem.API/1.0.0": {
+        "runtime": {
+          "OnlineEnrollmentSystem.API.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "OnlineEnrollmentSystem.Auth/1.0.0": {
+        "runtime": {
+          "OnlineEnrollmentSystem.Auth.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "OnlineEnrollmentSystem.Data/1.0.0": {
+        "runtime": {
+          "OnlineEnrollmentSystem.Data.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OnlineEnrollmentSystem.Views/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OnlineEnrollmentSystem.API/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OnlineEnrollmentSystem.Auth/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OnlineEnrollmentSystem.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

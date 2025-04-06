@@ -1,0 +1,136 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "OnlineEnrollmentSystem.API/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/OnlineEnrollmentSystem.API.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OnlineEnrollmentSystem.API.dll": {}
+        }
+      },
+      "OnlineEnrollmentSystem.Auth/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/OnlineEnrollmentSystem.Auth.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OnlineEnrollmentSystem.Auth.dll": {}
+        }
+      },
+      "OnlineEnrollmentSystem.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/OnlineEnrollmentSystem.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OnlineEnrollmentSystem.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OnlineEnrollmentSystem.API/1.0.0": {
+      "type": "project",
+      "path": "../OnlineEnrollmentSystem.API/OnlineEnrollmentSystem.API.csproj",
+      "msbuildProject": "../OnlineEnrollmentSystem.API/OnlineEnrollmentSystem.API.csproj"
+    },
+    "OnlineEnrollmentSystem.Auth/1.0.0": {
+      "type": "project",
+      "path": "../OnlineEnrollmentSystem.Auth/OnlineEnrollmentSystem.Auth.csproj",
+      "msbuildProject": "../OnlineEnrollmentSystem.Auth/OnlineEnrollmentSystem.Auth.csproj"
+    },
+    "OnlineEnrollmentSystem.Data/1.0.0": {
+      "type": "project",
+      "path": "../OnlineEnrollmentSystem.Data/OnlineEnrollmentSystem.Data.csproj",
+      "msbuildProject": "../OnlineEnrollmentSystem.Data/OnlineEnrollmentSystem.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "OnlineEnrollmentSystem.API >= 1.0.0",
+      "OnlineEnrollmentSystem.Auth >= 1.0.0",
+      "OnlineEnrollmentSystem.Data >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\merca\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
+      "projectName": "OnlineEnrollmentSystem.Views",
+      "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
+      "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {
+            "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
+              "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj"
+            },
+            "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
+              "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj"
+            },
+            "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
+              "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

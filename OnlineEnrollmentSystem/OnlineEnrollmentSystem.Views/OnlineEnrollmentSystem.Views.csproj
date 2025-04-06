@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineEnrollmentSystem.API\OnlineEnrollmentSystem.API.csproj" />
+    <ProjectReference Include="..\OnlineEnrollmentSystem.Auth\OnlineEnrollmentSystem.Auth.csproj" />
+    <ProjectReference Include="..\OnlineEnrollmentSystem.Data\OnlineEnrollmentSystem.Data.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>
