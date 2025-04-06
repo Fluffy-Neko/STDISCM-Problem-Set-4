@@ -1,0 +1,21 @@
+@model List<OnlineEnrollmentSystem.Models.GradeModel>  
+
+<h1>Your Grades</h1>  
+
+<table>  
+    <thead>  
+        <tr>  
+            <th>Course Name</th>  
+            <th>Grade</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var grade in Model)  
+        {  
+            <tr>  
+                <td>@grade.CourseName</td>  
+                <td>@grade.Grade</td>  
+            </tr>  
+        }  
+    </tbody>  
+</table>

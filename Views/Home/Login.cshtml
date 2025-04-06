@@ -1,0 +1,17 @@
+@model OnlineEnrollmentSystem.Models.UserModel  
+
+<h1>Login</h1>  
+<form asp-action="Login" method="post">  
+    <label for="username">Username:</label>  
+    <input type="text" id="username" name="Username" />  
+    <br />  
+    <label for="password">Password:</label>  
+    <input type="password" id="password" name="Password" />  
+    <br />  
+    <button type="submit">Login</button>  
+</form>  
+
+@if (!ViewData.ModelState.IsValid)  
+{  
+    <p style="color: red;">Invalid username or password.</p>  
+}
