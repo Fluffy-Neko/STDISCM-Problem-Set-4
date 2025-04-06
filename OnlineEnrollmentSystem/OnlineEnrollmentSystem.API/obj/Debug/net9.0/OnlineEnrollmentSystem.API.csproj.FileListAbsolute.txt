@@ -10,3 +10,15 @@ C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\Onl
 C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.API.dll
 C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.pdb
 C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.API.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\bin\Debug\net9.0\OnlineEnrollmentSystem.API.deps.json
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\bin\Debug\net9.0\OnlineEnrollmentSystem.API.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\bin\Debug\net9.0\OnlineEnrollmentSystem.API.pdb
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.AssemblyInfoInputs.cache
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.AssemblyInfo.cs
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.csproj.CoreCompileInputs.cache
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.sourcelink.json
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.API.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.pdb
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.API.dll

@@ -8,24 +8,26 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\merca\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
+      "projectUniqueName": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
       "projectName": "OnlineEnrollmentSystem.Auth",
-      "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
-      "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\obj\\",
+      "projectPath": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
