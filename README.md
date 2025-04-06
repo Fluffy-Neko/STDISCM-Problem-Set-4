@@ -30,3 +30,10 @@ When a node is down, on the features supported by that node should stop working,
 
 **Key implementation steps** <br>
 Explanations on how fault tolerance is achieved
+
+
+
+**TO RUN**
+go to \OnlineEnrollmentSystem terminal
+run on terminal : dotnet run
+go to http://localhost:<insert specified number>/Home/Login
