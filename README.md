@@ -30,3 +30,19 @@ When a node is down, on the features supported by that node should stop working,
 
 **Key implementation steps** <br>
 Explanations on how fault tolerance is achieved
+
+## TO RUN
+- cd OnlineEnrollmentSystem
+- dotnet build
+- dotnet run
+
+
+Now listening on: http://localhost:5000
+    Home Page: http://localhost:5000/Home/Index
+    Login Page: http://localhost:5000/Home/Login
+    Course Page: http://localhost:5000/Home/Courses
+    Grades Page: http://localhost:5000/Home/Grades
+
+Demo Login Credentials: 
+    Username: student
+    Password: password
