@@ -1,17 +1,57 @@
 @model OnlineEnrollmentSystem.Models.UserModel  
 
-<h1>Login</h1>  
-<form asp-action="Login" method="post">  
-    <label for="username">Username:</label>  
-    <input type="text" id="username" name="Username" />  
-    <br />  
-    <label for="password">Password:</label>  
-    <input type="password" id="password" name="Password" />  
-    <br />  
-    <button type="submit">Login</button>  
-</form>  
+@{  
+    ViewData["Title"] = "Login";  
+}  
 
-@if (!ViewData.ModelState.IsValid)  
-{  
-    <p style="color: red;">Invalid username or password.</p>  
-}
+<div class="container mt-5">  
+    <div class="row justify-content-center">  
+        <div class="col-md-6">  
+            <div class="card shadow-lg">  
+                <div class="card-header bg-primary text-white text-center">  
+                    <h3>User Login</h3>  
+                </div>  
+                <div class="card-body">  
+                    <form asp-action="Login" method="post">  
+                        <div class="mb-3">  
+                            <label for="username" class="form-label">Username</label>  
+                            <input  
+                                type="text"  
+                                id="username"  
+                                name="Username"  
+                                class="form-control"  
+                                placeholder="Enter your username"  
+                                required  
+                            />  
+                        </div>  
+                        <div class="mb-3">  
+                            <label for="password" class="form-label">Password</label>  
+                            <input  
+                                type="password"  
+                                id="password"  
+                                name="Password"  
+                                class="form-control"  
+                                placeholder="Enter your password"  
+                                required  
+                            />  
+                        </div>  
+                        <div class="d-grid">  
+                            <button type="submit" class="btn btn-primary">Login</button>  
+                        </div>  
+                    </form>  
+
+                    @* Show error message if credentials are invalid *@  
+                    @if (!ViewData.ModelState.IsValid)  
+                    {  
+                        <div class="alert alert-danger mt-3" role="alert">  
+                            Invalid username or password.  
+                        </div>  
+                    }  
+                </div>  
+            </div>  
+            <div class="text-center mt-3">  
+                <a href="/Home/Index" class="text-decoration-none">Return to Home</a>  
+            </div>  
+        </div>  
+    </div>  
+</div>
