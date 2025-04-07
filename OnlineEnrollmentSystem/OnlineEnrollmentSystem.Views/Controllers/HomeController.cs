@@ -58,16 +58,16 @@ namespace OnlineEnrollmentSystem.Controllers
 		//}
 
 
-		// GET: /Home/Grades  
-		public IActionResult Grades()  
-        {  
-            // Mock grades for demonstration  
-            List<EnrollmentModel> grades = new List<EnrollmentModel>  
-            {
-				new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseName = "ST-MATH", Grade = "3.0" },
-				new EnrollmentModel { Id = 2, StudentId = 1, CourseId = 2, CourseName = "ST-INTSY", Grade = "2.5" }
-			};  
-            return View(grades);  
-        }
+		//// GET: /Home/Grades  
+		//public IActionResult Grades()  
+  //      {  
+  //          // Mock grades for demonstration  
+  //          List<EnrollmentModel> grades = new List<EnrollmentModel>  
+  //          {
+		//		new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseCode = "ST-MATH", Grade = "3.0" },
+		//		new EnrollmentModel { Id = 2, StudentId = 1, CourseId = 2, CourseCode = "ST-INTSY", Grade = "2.5" }
+		//	};  
+  //          return View(grades);  
+  //      }
     }  
 }

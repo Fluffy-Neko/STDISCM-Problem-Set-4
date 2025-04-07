@@ -28,12 +28,12 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Courses/View.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xWaWV3LmNzaHRtbA==
+[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Courses/Grades.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xHcmFkZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Grades.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHcmFkZXMuY3NodG1s
+[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Courses/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Index.cshtml]

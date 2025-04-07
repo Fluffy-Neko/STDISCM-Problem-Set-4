@@ -17,7 +17,7 @@ namespace OnlineEnrollmentSystem.Controllers
 			_context = context;
 		}
 
-		// GET: /Courses
+		// GET: /Courses/View
 		public async Task<IActionResult> View()
 		{
 			// Fetch courses from the database
@@ -43,6 +43,25 @@ namespace OnlineEnrollmentSystem.Controllers
 			};
 
 			return View(viewModel);
+		}
+
+		// GET: /Courses/Grades
+		public async Task<IActionResult> Grades()
+		{
+			//var studentIdString = HttpContext.Session.GetString("StudentId");
+			//if (string.IsNullOrEmpty(studentIdString) || !int.TryParse(studentIdString, out int studentId))
+			//{
+			//	return RedirectToAction("Login", "Auth"); // or handle unauthorized access
+			//}
+
+			int studentId = 0;
+
+			// Get the grades from the database
+			var grades = await _context.Enrollments
+									.Where(e => e.StudentId == studentId)
+									.ToListAsync(); // returns List<EnrollmentModel>
+
+			return View(grades);
 		}
 	}
 }
