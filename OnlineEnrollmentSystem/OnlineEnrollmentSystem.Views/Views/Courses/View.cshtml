@@ -1,34 +1,35 @@
-@model OnlineEnrollmentSystem.Models.CourseListViewModel
+@model OnlineEnrollmentSystem.Models.CourseListViewModel  
 
-<h1>Available Courses</h1>
+<h1>My Enrolled Classes</h1>  
 
-<table>
-    <thead>
-        <tr>
-            <th>Course Code</th>
-            <th>Enrollment Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var course in Model.Courses)
-        {
-            bool isEnrolled = Model.Enrollments.Any(e => e.CourseId == course.Id);
-            <tr>
-                <td>@course.CourseCode</td>
-                <td>
-                    @if (isEnrolled)
-                {
-                    <span style="color: green;">Enrolled</span>
-                }
-                else
-                {
-                    <form method="post" action="/Home/Enroll">
-                        <input type="hidden" name="CourseId" value="@course.Id" />
-                        <button type="submit">Enroll</button>
-                    </form>
-                }
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<table class="table table-bordered">  
+    <thead>  
+        <tr>  
+            <th>Course Code</th>  
+            <th>Grade</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var enrollment in Model.Enrollments)  
+        {  
+            <tr>  
+                <td>@enrollment.CourseName</td>  
+                <td>  
+                    @if (string.IsNullOrEmpty(enrollment.Grade))  
+                    {  
+                        <span>Not Graded Yet</span>  
+                    }  
+                    else  
+                    {  
+                        @enrollment.Grade  
+                    }  
+                </td>  
+            </tr>  
+        }  
+    </tbody>  
+</table>  
+
+<!-- Button to Navigate to Enrollment Page -->  
+<div class="text-right mt-3">  
+    <a href="/Courses/Enroll" class="btn btn-primary">Go to Enrollment Page</a>  
+</div>

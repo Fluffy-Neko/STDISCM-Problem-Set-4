@@ -1,0 +1,43 @@
+@model OnlineEnrollmentSystem.Models.CourseListViewModel  
+
+<h1>Available Courses to Enroll</h1>  
+
+<table class="table table-bordered">  
+    <thead>  
+        <tr>  
+            <th>Course Code</th>  
+            <th>Units</th>  
+            <th>Capacity</th>  
+            <th>Action</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var course in Model.Courses)  
+        {  
+            // Check if the user is not already enrolled in this course  
+            bool isEnrolled = Model.Enrollments.Any(enrollment => enrollment.CourseId == course.Id);  
+
+            // Display only courses where the student isn't enrolled  
+            if (!isEnrolled)  
+            {  
+                <tr>  
+                    <td>@course.CourseCode</td>  
+                    <td>@course.Units</td>  
+                    <td>@course.Capacity</td>  
+                    <td>  
+                        <!-- Form to Enroll -->  
+                        <form method="post" action="/Courses/Enroll">  
+                            <input type="hidden" name="CourseId" value="@course.Id" />  
+                            <button type="submit" class="btn btn-success">Enroll</button>  
+                        </form>  
+                    </td>  
+                </tr>  
+            }  
+        }  
+    </tbody>  
+</table>  
+
+<!-- Button to Navigate Back -->  
+<div class="text-left mt-3">  
+    <a href="/Courses/View" class="btn btn-secondary">Back to My Classes</a>  
+</div>
