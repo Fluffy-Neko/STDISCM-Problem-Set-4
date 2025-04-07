@@ -37,3 +37,6 @@ C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentS
 C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.csproj.AssemblyReference.cache
 C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.runtimeconfig.json
 C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.genruntimeconfig.cache
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.runtimeconfig.json
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.csproj.AssemblyReference.cache
+C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.genruntimeconfig.cache

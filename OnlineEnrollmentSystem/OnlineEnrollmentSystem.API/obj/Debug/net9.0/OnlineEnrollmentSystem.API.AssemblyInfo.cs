@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineEnrollmentSystem.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ed4faa8317099af1c9ecacce02217e10dab52d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+91dc905d909133218fac3acf0727f5123c2631c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineEnrollmentSystem.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineEnrollmentSystem.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

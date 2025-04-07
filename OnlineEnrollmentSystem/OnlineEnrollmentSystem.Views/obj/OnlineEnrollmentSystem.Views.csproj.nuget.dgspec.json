@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj": {}
+    "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
+    "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj",
+        "projectUniqueName": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj",
         "projectName": "OnlineEnrollmentSystem.API",
-        "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\obj\\",
+        "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj",
+        "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,24 +63,22 @@
         }
       }
     },
-    "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
+    "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
+        "projectUniqueName": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
         "projectName": "OnlineEnrollmentSystem.Auth",
-        "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\obj\\",
+        "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj",
+        "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -126,24 +122,22 @@
         }
       }
     },
-    "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
+    "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
+        "projectUniqueName": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
         "projectName": "OnlineEnrollmentSystem.Data",
-        "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\obj\\",
+        "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj",
+        "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -221,38 +215,36 @@
         }
       }
     },
-    "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj": {
+    "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
+        "projectUniqueName": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
         "projectName": "OnlineEnrollmentSystem.Views",
-        "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
-        "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\obj\\",
+        "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
+        "packagesPath": "C:\\Users\\merca\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\merca\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
-                "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj"
+              "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
+                "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj"
               },
-              "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
-                "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj"
+              "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
+                "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj"
               },
-              "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
-                "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj"
+              "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
+                "projectPath": "C:\\Users\\merca\\Documents\\GitHub\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj"
               }
             }
           }

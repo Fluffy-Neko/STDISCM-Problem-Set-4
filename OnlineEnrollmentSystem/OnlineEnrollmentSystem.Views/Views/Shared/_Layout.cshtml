@@ -18,6 +18,16 @@
                     <ul class="navbar-nav ms-auto">  
                         <li class="nav-item"><a class="nav-link" href="/Home/Index">Home</a></li>  
                         <li class="nav-item"><a class="nav-link" href="/Privacy">Privacy</a></li>  
+                        @* Conditional Logout Button *@  
+                        @if (!ViewContext.RouteData.Values["action"].ToString().Equals("Index", StringComparison.OrdinalIgnoreCase)   
+                              && !ViewContext.RouteData.Values["action"].ToString().Equals("Login", StringComparison.OrdinalIgnoreCase))  
+                        {  
+                            <li class="nav-item">  
+                                <form method="post" action="/Home/Logout" style="display: inline;">  
+                                    <button type="submit" class="btn btn-outline-danger nav-link">Logout</button>  
+                                </form>  
+                            </li>  
+                        }  
                     </ul>  
                 </div>  
             </div>  
