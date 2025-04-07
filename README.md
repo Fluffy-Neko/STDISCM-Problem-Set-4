@@ -40,8 +40,9 @@ Explanations on how fault tolerance is achieved
 Now listening on: http://localhost:5000
     Home Page: http://localhost:5000/Home/Index
     Login Page: http://localhost:5000/Home/Login
-    Course Page: http://localhost:5000/Home/Courses
-    Grades Page: http://localhost:5000/Home/Grades
+    Grades Page: http://localhost:5000/Courses/View
+    Enroll Page: http://localhost:5000/Courses/Enroll
+    Faculty Page: http://localhost:5000/Courses/Faculty
 
 Demo Login Credentials: 
     Username: student
