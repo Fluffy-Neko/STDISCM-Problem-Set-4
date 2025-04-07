@@ -1,0 +1,42 @@
+@model OnlineEnrollmentSystem.Models.CourseListViewModel  
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Faculty Page - Grade Students</title>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />  
+</head>  
+<body>  
+    <div class="container mt-5">  
+        <h1 class="mb-4">Faculty Page - Grade Students</h1>  
+
+        @foreach (var course in Model.Courses)  
+        {  
+            <h2>Course: @course.CourseCode</h2>  
+            <p><strong>Capacity:</strong> @course.Capacity</p>  
+
+            <table class="table table-bordered">  
+                <thead>  
+                    <tr>  
+                        <th>Student Name</th>  
+                        <th>Grade</th>  
+                        <th>Action</th>  
+                    </tr>  
+                </thead>  
+                <tbody>  
+                    <!-- Add dummy rows or real ones later -->  
+                    <tr>  
+                        <td>John Doe</td>  
+                        <td>Not Graded Yet</td>  
+                        <td>  
+                            <form method="post">  
+                                <input type="text" name="grade" placeholder="Enter Grade" class="form-control d-inline w-50" required />  
+                                <button type="submit" class="btn btn-primary">Submit</button>  
+                            </form>  
+                        </td>  
+                    </tr>  
+                </tbody>  
+            </table>  
+        }  
+    </div>  
+</body>  
+</html>
