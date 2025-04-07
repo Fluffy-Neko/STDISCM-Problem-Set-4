@@ -26,7 +26,7 @@ namespace OnlineEnrollmentSystem.Controllers
             {  
                 // Store user session (demo only, no real authentication yet)  
                 TempData["UserName"] = loginRequest.Username;
-				return RedirectToAction("View", "Courses");
+				return RedirectToAction("Index", "Courses");
 			}  
 
             ModelState.AddModelError(string.Empty, "Invalid credentials.");  

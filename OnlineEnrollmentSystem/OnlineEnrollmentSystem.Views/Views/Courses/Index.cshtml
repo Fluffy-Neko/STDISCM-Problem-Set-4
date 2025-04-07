@@ -1,0 +1,52 @@
+@model OnlineEnrollmentSystem.Models.CourseListViewModel
+
+@{
+    bool userRole = ViewBag.UserRole;
+}
+
+<h1>@(!userRole ? "Available Courses" : "Your Courses")</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Course Code</th>
+            <th>Units</th>
+            <th>Slots</th>
+            <th>Instructor</th>
+            <th>@(!userRole ? "Enrollment Status" : "Actions")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model.Courses)
+        {
+        <tr>
+            <td>@course.CourseCode</td>
+            <td>@course.Units</td>
+            <td>@course.SlotsTaken / @course.Capacity</td>
+            <td>@course.Instructor</td>
+            <td>
+                @if (!userRole)
+                {
+                    @if (course.IsEnrolled)
+                    {
+                        <span style="color: green;">Enrolled</span>
+                    }
+                    else
+                    {
+                        <form method="post" action="/Courses/Enroll">
+                            <input type="hidden" name="CourseId" value="@course.Id" />
+                            <button type="submit">Enroll</button>
+                        </form>
+                    }
+                }
+                else if (userRole)
+                {
+                    <a href="@Url.Action("View", "Courses", new { id = course.Id })">
+                        <button type="button">View</button>
+                    </a>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

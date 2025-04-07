@@ -18,7 +18,7 @@ namespace OnlineEnrollmentSystem.Controllers
 		}
 
 		// GET: /Courses/View
-		public async Task<IActionResult> View()
+		public async Task<IActionResult> Index()
 		{
 			var viewModel = new CourseListViewModel();
 			bool userRole = true;
