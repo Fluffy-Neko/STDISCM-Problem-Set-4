@@ -106,7 +106,29 @@ namespace OnlineEnrollmentSystem.Controllers
 			return View(viewModel);
 		}
 
+		[HttpGet]
+		public async Task<IActionResult> View(int id)
+		{
+			var course = await _context.Courses
+				.FirstOrDefaultAsync(c => c.Id == id);
 
+			if (course == null)
+			{
+				return NotFound(); // Course not found
+			}
+
+			// You can populate a view model with course details and pass it to the view
+			var viewModel = new CourseViewModel
+			{
+				Id = course.Id,
+				CourseCode = course.CourseCode,
+				Units = course.Units,
+				Capacity = course.Capacity,
+				// Add other necessary properties
+			};
+
+			return View(viewModel); // Pass the view model to the view
+		}
 
 		// GET: /Courses/Grades
 		public async Task<IActionResult> Grades()
