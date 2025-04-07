@@ -20,34 +20,93 @@ namespace OnlineEnrollmentSystem.Controllers
 		// GET: /Courses/View
 		public async Task<IActionResult> View()
 		{
-			int studentId = 0;
+			var viewModel = new CourseListViewModel();
+			bool userRole = false;
 
-			// Fetch courses from the database
-			var courses = await _context.Courses.ToListAsync();
-
-			// Fetch enrollments from the database
-			var enrollments = await _context.Enrollments
-										.Where(e => e.StudentId == studentId)
-										.ToListAsync();
-
-			// Create the view model with courses and enrollments
-			var viewModel = new CourseListViewModel
+			if (!userRole)
 			{
-				Courses = courses.Select(course => new CourseViewModel
+				int studentId = 0;
+
+				var courses = await _context.Courses.ToListAsync();
+
+				var enrollments = await _context.Enrollments
+					.Where(e => e.StudentId == studentId)
+					.ToListAsync();
+
+				var instructorIds = courses.Select(c => c.InstructorId).Distinct().ToList();
+
+				var instructors = await _context.Users
+					.Where(u => instructorIds.Contains(u.Id))
+					.ToListAsync();
+
+				viewModel.Courses = courses.Select(course =>
 				{
-					Id = course.Id,
-					InstructorId = course.InstructorId,
-					CourseCode = course.CourseCode,
-					Units = course.Units,
-					Capacity = course.Capacity,
-					// Check if the student is enrolled in this course
-					IsEnrolled = enrollments.Any(e => e.CourseId == course.Id)
-				}).ToList(),
-				Enrollments = enrollments
-			};
+					var courseEnrollments = enrollments.Where(e => e.CourseId == course.Id).ToList();
+					var instructor = instructors.FirstOrDefault(i => i.Id == course.InstructorId);
+
+					return new CourseViewModel
+					{
+						Id = course.Id,
+						CourseCode = course.CourseCode,
+						Units = course.Units,
+						Capacity = course.Capacity,
+						SlotsTaken = courseEnrollments.Count,
+						IsEnrolled = enrollments.Any(e => e.CourseId == course.Id),
+						Instructor = instructor?.Username ?? "Unknown",
+					};
+				}).ToList();
+			}
+			else if (userRole)
+			{
+				//int instructorId = 1;
+
+				//var courses = await _context.Courses
+				//	.Where(c => c.InstructorId == instructorId)
+				//	.ToListAsync();
+
+				//var courseIds = courses.Select(c => c.Id).ToList();
+
+				//var enrollments = await _context.Enrollments
+				//	.Where(e => courseIds.Contains(e.CourseId))
+				//	.ToListAsync();
+
+				//var students = await _context.Users
+				//	.Where(u => enrollments.Select(e => e.StudentId).Contains(u.Id))
+				//	.ToListAsync();
+
+				//var instructors = await _context.Users
+				//	.Where(u => courses.Select(c => c.InstructorId).Contains(u.Id))
+				//	.ToListAsync();
+
+				//viewModel.Courses = courses.Select(course =>
+				//{
+				//	var courseEnrollments = enrollments.Where(e => e.CourseId == course.Id).ToList();
+				//	var courseStudents = students.Where(s => courseEnrollments.Select(e => e.StudentId).Contains(s.Id)).ToList();
+				//	var instructor = instructors.FirstOrDefault(i => i.Id == course.InstructorId);
+
+				//	return new CourseViewModel
+				//	{
+				//		Id = course.Id,
+				//		InstructorId = course.InstructorId,
+				//		CourseCode = course.CourseCode,
+				//		Units = course.Units,
+				//		Capacity = course.Capacity,
+				//		SlotsTaken = courseEnrollments.Count,
+				//		IsEnrolled = true,
+				//		Instructor = instructor?.Username ?? "Unknown",
+				//		Students = courseStudents
+				//	};
+				//}).ToList();
+			}
+			else
+			{
+				return NotFound();
+			}
 
 			return View(viewModel);
 		}
+
+
 
 		// GET: /Courses/Grades
 		public async Task<IActionResult> Grades()
@@ -58,7 +117,7 @@ namespace OnlineEnrollmentSystem.Controllers
 			//	return RedirectToAction("Login", "Auth"); // or handle unauthorized access
 			//}
 
-			int studentId = 5;
+			int studentId = 0;
 
 			var validGrades = new List<string> { "0.0", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0" };
 

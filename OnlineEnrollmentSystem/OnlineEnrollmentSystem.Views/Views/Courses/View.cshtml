@@ -6,29 +6,34 @@
     <thead>
         <tr>
             <th>Course Code</th>
+            <th>Units</th>
+            <th>Slots</th>
+            <th>Instructor</th>
             <th>Enrollment Status</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var course in Model.Courses)
         {
-            bool isEnrolled = Model.Enrollments.Any(e => e.CourseId == course.Id);
-            <tr>
-                <td>@course.CourseCode</td>
-                <td>
-                    @if (isEnrolled)
-                {
-                    <span style="color: green;">Enrolled</span>
-                }
-                else
-                {
-                    <form method="post" action="/Courses/Enroll">
-                        <input type="hidden" name="CourseId" value="@course.Id" />
-                        <button type="submit">Enroll</button>
-                    </form>
-                }
-                </td>
-            </tr>
+        <tr>
+            <td>@course.CourseCode</td>
+            <td>@course.Units</td>
+            <td>@course.SlotsTaken / @course.Capacity</td>
+            <td>@course.Instructor</td>
+            <td>
+                @if (course.IsEnrolled)
+                    {
+                <span style="color: green;">Enrolled</span>
+                    }
+                    else
+                    {
+                <form method="post" action="/Courses/Enroll">
+                    <input type="hidden" name="CourseId" value="@course.Id" />
+                    <button type="submit">Enroll</button>
+                </form>
+                    }
+            </td>
+        </tr>
         }
     </tbody>
 </table>
