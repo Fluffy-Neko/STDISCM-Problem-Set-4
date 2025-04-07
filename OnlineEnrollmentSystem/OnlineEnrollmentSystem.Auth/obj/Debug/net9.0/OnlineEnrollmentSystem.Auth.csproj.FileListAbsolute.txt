@@ -22,3 +22,15 @@ D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\O
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.Auth.dll
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.pdb
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.Auth.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\bin\Debug\net9.0\OnlineEnrollmentSystem.Auth.deps.json
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\bin\Debug\net9.0\OnlineEnrollmentSystem.Auth.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\bin\Debug\net9.0\OnlineEnrollmentSystem.Auth.pdb
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.AssemblyInfoInputs.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.AssemblyInfo.cs
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.sourcelink.json
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.Auth.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\OnlineEnrollmentSystem.Auth.pdb
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Auth\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.Auth.dll

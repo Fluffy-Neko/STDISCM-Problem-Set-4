@@ -22,3 +22,15 @@ D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\O
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.API.dll
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.pdb
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.API.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\bin\Debug\net9.0\OnlineEnrollmentSystem.API.deps.json
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\bin\Debug\net9.0\OnlineEnrollmentSystem.API.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\bin\Debug\net9.0\OnlineEnrollmentSystem.API.pdb
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.AssemblyInfoInputs.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.AssemblyInfo.cs
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.sourcelink.json
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.API.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\OnlineEnrollmentSystem.API.pdb
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.API\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.API.dll

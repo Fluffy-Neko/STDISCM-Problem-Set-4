@@ -29,7 +29,7 @@ namespace OnlineEnrollmentSystem.Controllers
 			// Create the view model with courses and enrollments
 			var viewModel = new CourseListViewModel
 			{
-				Courses = courses.Select(course => new CourseViewModel
+				Courses = courses.Select(course => new CourseModel
 				{
 					Id = course.Id,
 					InstructorId = course.InstructorId,
@@ -37,7 +37,7 @@ namespace OnlineEnrollmentSystem.Controllers
 					Units = course.Units,
 					Capacity = course.Capacity,
 					// Check if the student is enrolled in this course
-					IsEnrolled = enrollments.Any(e => e.CourseId == course.Id)
+					// IsEnrolled = enrollments.Any(e => e.CourseId == course.Id)
 				}).ToList(),
 				Enrollments = enrollments
 			};
