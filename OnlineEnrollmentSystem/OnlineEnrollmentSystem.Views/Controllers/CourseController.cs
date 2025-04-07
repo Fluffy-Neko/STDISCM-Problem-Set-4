@@ -54,12 +54,13 @@ namespace OnlineEnrollmentSystem.Controllers
 			//	return RedirectToAction("Login", "Auth"); // or handle unauthorized access
 			//}
 
-			int studentId = 0;
+			int studentId = 5;
 
-			// Get the grades from the database
+			var validGrades = new List<string> { "0.0", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0" };
+
 			var grades = await _context.Enrollments
-									.Where(e => e.StudentId == studentId)
-									.ToListAsync(); // returns List<EnrollmentModel>
+				.Where(e => e.StudentId == studentId && validGrades.Contains(e.Grade))
+				.ToListAsync();
 
 			return View(grades);
 		}

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineEnrollmentSystem.Views")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ed4faa8317099af1c9ecacce02217e10dab52d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d4388a9a4e88f3ff2374d85fce073ef32e2ebad3")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineEnrollmentSystem.Views")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineEnrollmentSystem.Views")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
