@@ -19,13 +19,13 @@ namespace OnlineEnrollmentSystem.Controllers
 
         // POST: /Home/Login  
         [HttpPost]  
-        public IActionResult Login(UserModel loginRequest)  
+        public IActionResult Login(UserAuthModel loginRequest)  
         {  
             // For simplicity, just validate hardcoded credentials for now
-            if (loginRequest.Username == "student" && loginRequest.Password == "password")  
+            if (loginRequest.Id ==  1 && loginRequest.Password == "password")  
             {  
                 // Store user session (demo only, no real authentication yet)  
-                TempData["UserName"] = loginRequest.Username;
+                TempData["id"] = loginRequest.Id;
 				return RedirectToAction("Index", "Courses");
 			}  
 
