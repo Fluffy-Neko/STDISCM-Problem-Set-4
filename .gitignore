@@ -1,0 +1,4 @@
+﻿# Ignore build artifacts
+appsettings.json
+**/bin/
+**/obj/

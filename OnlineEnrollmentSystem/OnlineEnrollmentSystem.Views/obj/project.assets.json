@@ -4282,40 +4282,40 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\chris\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
+      "projectUniqueName": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
       "projectName": "OnlineEnrollmentSystem.Views",
-      "projectPath": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\obj\\",
+      "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\OnlineEnrollmentSystem.Views.csproj",
+      "packagesPath": "C:\\Users\\chris\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Views\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\chris\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
-              "projectPath": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj"
+            "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
+              "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj"
             },
-            "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
-              "projectPath": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj"
+            "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
+              "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj"
             },
-            "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
-              "projectPath": "D:\\Dane\\DLSU-STUFF\\AY2024-2025\\Term_2\\STDISCM\\STDISCM-P4\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj"
+            "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
+              "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj"
             }
           }
         }

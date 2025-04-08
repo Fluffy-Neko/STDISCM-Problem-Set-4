@@ -10,6 +10,13 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 	options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+builder.Services.AddHttpClient("Api", client =>
+{
+    client.BaseAddress = new Uri("http://api-machine:5001/api/");
+});
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
