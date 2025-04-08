@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineEnrollmentSystem.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d492bcf959f619651614eb6f136741d1699956b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+221a5c2a289d4e26b22cdea9a071fd4e52635fdd")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineEnrollmentSystem.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineEnrollmentSystem.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

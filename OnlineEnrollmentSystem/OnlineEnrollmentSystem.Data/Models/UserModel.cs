@@ -4,6 +4,5 @@ namespace OnlineEnrollmentSystem.Models
     {
 		public int Id { get; set; }
 		public string Username { get; set; }
-        public bool Role { get; set; }
     }
 }

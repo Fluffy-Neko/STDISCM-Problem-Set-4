@@ -109,26 +109,66 @@ namespace OnlineEnrollmentSystem.Controllers
 		[HttpGet]
 		public async Task<IActionResult> View(int id)
 		{
-			var course = await _context.Courses
-				.FirstOrDefaultAsync(c => c.Id == id);
+			var course = await _context.Courses.FirstOrDefaultAsync(c => c.Id == id);
 
 			if (course == null)
 			{
 				return NotFound(); // Course not found
 			}
 
-			// You can populate a view model with course details and pass it to the view
+			// Get instructor
+			var instructor = await _context.Users.FirstOrDefaultAsync(u => u.Id == course.InstructorId);
+
+			// Get enrollments for this course
+			var enrollments = await _context.Enrollments
+				.Where(e => e.CourseId == id)
+				.ToListAsync();
+
+			// Get student user info
+			var studentIds = enrollments.Select(e => e.StudentId).ToList();
+			var students = await _context.Users
+				.Where(u => studentIds.Contains(u.Id))
+				.ToListAsync();
+
+			// Set ViewBag student data (for name, grade, and button)
+			ViewBag.StudentData = students.Select(s => new
+			{
+				Name = s.Username,
+				StudentId = s.Id,
+				Grade = enrollments.FirstOrDefault(e => e.StudentId == s.Id)?.Grade ?? "N/A"
+			}).ToList();
+
 			var viewModel = new CourseViewModel
 			{
 				Id = course.Id,
 				CourseCode = course.CourseCode,
 				Units = course.Units,
 				Capacity = course.Capacity,
-				// Add other necessary properties
+				SlotsTaken = enrollments.Count,
+				Instructor = instructor?.Username ?? "Unknown",
+				Students = students
 			};
 
-			return View(viewModel); // Pass the view model to the view
+			return View(viewModel);
 		}
+
+		[HttpPost]
+		public async Task<IActionResult> UpdateGrade(int studentId, int courseId, string grade)
+		{
+			var enrollment = await _context.Enrollments
+				.FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == courseId);
+
+			if (enrollment == null)
+			{
+				return NotFound("Enrollment not found.");
+			}
+
+			enrollment.Grade = grade;
+			await _context.SaveChangesAsync();
+
+			return RedirectToAction("View", new { id = courseId }); // Redirect back to the course view
+		}
+
 
 		// GET: /Courses/Grades
 		public async Task<IActionResult> Grades()
@@ -149,7 +189,6 @@ namespace OnlineEnrollmentSystem.Controllers
 
 			return View(grades);
 		}
-
 
 		[HttpPost]
 		public async Task<IActionResult> Enroll(int courseId)
