@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineEnrollmentSystem.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d492bcf959f619651614eb6f136741d1699956b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5973974d04288e9840efd957b234408d73d41dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineEnrollmentSystem.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineEnrollmentSystem.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineEnrollmentSystem.Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+174142a9fb491173e0d0e62dee3371cf58661631")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5973974d04288e9840efd957b234408d73d41dc")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineEnrollmentSystem.Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineEnrollmentSystem.Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
