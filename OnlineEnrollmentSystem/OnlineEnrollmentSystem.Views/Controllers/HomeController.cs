@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OnlineEnrollmentSystem.Data;
 using OnlineEnrollmentSystem.Models;
+using Org.BouncyCastle.Security;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -29,7 +30,7 @@ namespace OnlineEnrollmentSystem.Controllers
 
 		// POST: /Home/Login  
 		[HttpPost]
-		public async Task<IActionResult> Login(UserAuthModel loginRequest)
+		public async Task<IActionResult> Login(UserModel loginRequest)
 		{
 			if (!ModelState.IsValid)
 			{
@@ -43,7 +44,7 @@ namespace OnlineEnrollmentSystem.Controllers
 			if (user != null)
 			{
 				TempData["id"] = user.Id;
-				TempData["role"] = user.Role; // You might use this to distinguish instructor vs student
+				TempData["role"] = user.Role;
 
 				return RedirectToAction("Index", "Courses");
 			}
