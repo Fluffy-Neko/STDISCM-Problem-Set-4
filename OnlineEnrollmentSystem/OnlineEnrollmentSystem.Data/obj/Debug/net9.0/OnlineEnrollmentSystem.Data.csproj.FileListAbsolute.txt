@@ -25,3 +25,18 @@ D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\O
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.pdb
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.genruntimeconfig.cache
 D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.Data.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.deps.json
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.runtimeconfig.json
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\bin\Debug\net9.0\OnlineEnrollmentSystem.Data.pdb
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.csproj.AssemblyReference.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.AssemblyInfoInputs.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.AssemblyInfo.cs
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.sourcelink.json
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\refint\OnlineEnrollmentSystem.Data.dll
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.pdb
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\OnlineEnrollmentSystem.Data.genruntimeconfig.cache
+C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Data\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.Data.dll
