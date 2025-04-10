@@ -58,13 +58,24 @@ namespace OnlineEnrollmentSystem.Controllers
 				Response.Cookies.Append("jwt", token, new CookieOptions
 				{
 					HttpOnly = true,
+					Secure = true,
+					SameSite = SameSiteMode.Strict,
 					Expires = DateTime.UtcNow.AddDays(1)
 				});
 
+				string role;
+				if (!user.Role)
+				{
+					role = "student";
+				} else
+				{
+					role = "instructor";
+				}
+
 				// Optionally, store user role and ID in the session if needed
-				HttpContext.Session.SetString("role", user.Role.ToString());
-				HttpContext.Session.SetInt32("userId", user.Id);
-				HttpContext.Session.SetString("username", user.Username);
+				HttpContext.Session.SetString("Role", role);
+				HttpContext.Session.SetInt32("UserId", (int)user.Id);
+				HttpContext.Session.SetString("Username", user.Username);
 
 				// Redirect to the Courses page
 				return RedirectToAction("Index", "Courses");
@@ -73,5 +84,14 @@ namespace OnlineEnrollmentSystem.Controllers
 			ModelState.AddModelError(string.Empty, "Invalid credentials.");
 			return View(loginRequest);
 		}
+
+		[HttpPost]
+		public IActionResult Logout()
+		{
+			HttpContext.Session.Clear();
+			Response.Cookies.Delete("jwt");
+			return RedirectToAction("Login", "Home");
+		}
+
 	}
 }

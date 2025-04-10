@@ -17,20 +17,24 @@ namespace OnlineEnrollmentSystem.Controllers
 			_context = context;
 		}
 
-		// GET: /Courses/View
+		// GET: /Courses/Index
 		public async Task<IActionResult> Index()
 		{
 			var viewModel = new CourseListViewModel();
-			bool userRole = true;
+			var userRole = HttpContext.Session.GetString("Role");
+			var userId = HttpContext.Session.GetInt32("UserId");
 
-			if (!userRole)
+			if (userId == null)
 			{
-				int studentId = 1;
+				return RedirectToAction("Login", "Home");
+			}
 
+			if (userRole == "student")
+			{
 				var courses = await _context.Courses.ToListAsync();
 
 				var enrollments = await _context.Enrollments
-					.Where(e => e.StudentId == studentId)
+					.Where(e => e.StudentId == userId)
 					.ToListAsync();
 
 				var instructorIds = courses.Select(c => c.InstructorId).Distinct().ToList();
@@ -56,12 +60,10 @@ namespace OnlineEnrollmentSystem.Controllers
 					};
 				}).ToList();
 			}
-			else if (userRole)
+			else if (userRole == "instructor")
 			{
-				int instructorId = 2;
-
 				var courses = await _context.Courses
-					.Where(c => c.InstructorId == instructorId)
+					.Where(c => c.InstructorId == userId)
 					.ToListAsync();
 
 				var courseIds = courses.Select(c => c.Id).ToList();
@@ -71,7 +73,7 @@ namespace OnlineEnrollmentSystem.Controllers
 					.ToListAsync();
 
 				string instructor = await _context.Users
-					.Where(u => u.Id == instructorId)
+					.Where(u => u.Id == userId)
 					.Select(u => u.Username)
 					.FirstOrDefaultAsync();
 
@@ -119,6 +121,21 @@ namespace OnlineEnrollmentSystem.Controllers
 		[HttpGet]
 		public async Task<IActionResult> View(int id)
 		{
+			// Retrieve the logged-in user's ID and role from the session
+			var userRole = HttpContext.Session.GetString("Role");
+			var userId = HttpContext.Session.GetInt32("UserId");
+
+			if (userId == null)
+			{
+				return RedirectToAction("Login", "Home");
+			}
+
+			if (userRole != "instructor")
+			{
+				// MAKE SEPARATE VIEW
+				return RedirectToAction("Index", "Home");
+			}
+
 			var course = await _context.Courses.FirstOrDefaultAsync(c => c.Id == id);
 
 			if (course == null)
@@ -167,6 +184,20 @@ namespace OnlineEnrollmentSystem.Controllers
 		[HttpPost]
 		public async Task<IActionResult> UpdateGrade(int studentId, int courseId, string grade)
 		{
+			var userRole = HttpContext.Session.GetString("Role");
+			var userId = HttpContext.Session.GetInt32("UserId");
+
+			if (userId == null)
+			{
+				return RedirectToAction("Login", "Home");
+			}
+
+			if (userRole != "instructor")
+			{
+				// MAKE SEPARATE VIEW
+				return RedirectToAction("Index", "Home");
+			}
+
 			var validGrades = new List<string> { "NGA", "0.0", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0" };
 
 			if (!validGrades.Contains(grade))
@@ -194,18 +225,24 @@ namespace OnlineEnrollmentSystem.Controllers
 		// GET: /Courses/Grades
 		public async Task<IActionResult> Grades()
 		{
-			//var studentIdString = HttpContext.Session.GetString("StudentId");
-			//if (string.IsNullOrEmpty(studentIdString) || !int.TryParse(studentIdString, out int studentId))
-			//{
-			//	return RedirectToAction("Login", "Auth"); // or handle unauthorized access
-			//}
+			var userRole = HttpContext.Session.GetString("Role");
+			var userId = HttpContext.Session.GetInt32("UserId");
 
-			int studentId = 1;
+			if (userId == null)
+			{
+				return RedirectToAction("Login", "Home");
+			}
+
+			if (userRole != "student")
+			{
+				// MAKE SEPARATE VIEW
+				return RedirectToAction("Index", "Home");
+			}
 
 			var validGrades = new List<string> { "0.0", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0" };
 
 			var grades = await _context.Enrollments
-				.Where(e => e.StudentId == studentId && validGrades.Contains(e.Grade))
+				.Where(e => e.StudentId == userId && validGrades.Contains(e.Grade))
 				.ToListAsync();
 
 			return View(grades);
@@ -214,31 +251,36 @@ namespace OnlineEnrollmentSystem.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Enroll(int courseId)
 		{
-			// Example: get logged-in student ID from session or claims
-			//var studentId = HttpContext.Session.GetInt32("StudentId"); // or however you're storing it
-			//if (studentId == null)
-			//	return RedirectToAction("Login", "Auth");
+			var userRole = HttpContext.Session.GetString("Role");
+			var userId = HttpContext.Session.GetInt32("UserId");
 
-			int studentId = 1;
+			if (userId == null)
+			{
+				return RedirectToAction("Login", "Home");
+			}
 
-			// Check if already enrolled
+			if (userRole != "student")
+			{
+				// MAKE SEPARATE VIEW
+				return RedirectToAction("Index", "Home");
+			}
+
 			bool alreadyEnrolled = await _context.Enrollments
-				.AnyAsync(e => e.StudentId == studentId && e.CourseId == courseId);
+				.AnyAsync(e => e.StudentId == userId && e.CourseId == courseId);
 
 			if (alreadyEnrolled)
 			{
 				TempData["Error"] = "You're already enrolled in this course.";
-				return RedirectToAction("View");
+				return RedirectToAction("Index");
 			}
 
-			// Enroll the student
 			var course = await _context.Courses.FindAsync(courseId);
 			if (course == null)
 				return NotFound();
 
 			var enrollment = new EnrollmentModel
 			{
-				StudentId = studentId,
+				StudentId = userId ?? 0,
 				CourseId = courseId,
 				CourseCode = course.CourseCode,
 				Grade = "NGA"
@@ -248,7 +290,7 @@ namespace OnlineEnrollmentSystem.Controllers
 			await _context.SaveChangesAsync();
 
 			TempData["Success"] = "Successfully enrolled!";
-			return RedirectToAction("View");
+			return RedirectToAction("Index");
 		}
 	}
 }
