@@ -33,6 +33,12 @@ namespace OnlineEnrollmentSystem.Controllers
 		// GET: /Home/Login
 		public IActionResult Login()
 		{
+			var userId = HttpContext.Session.GetInt32("UserId");
+			if (userId.HasValue)
+			{
+				return RedirectToAction("Index", "Courses");
+			}
+
 			return View();
 		}
 
