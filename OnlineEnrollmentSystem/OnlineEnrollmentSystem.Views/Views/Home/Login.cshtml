@@ -1,8 +1,8 @@
-@model OnlineEnrollmentSystem.Models.UserModel  
+@model OnlineEnrollmentSystem.Models.UserAuthModel  
 
-@{  
-    ViewData["Title"] = "Login";  
-}  
+@{
+    ViewData["Title"] = "Login";
+}
 
 <div class="container mt-5">  
     <div class="row justify-content-center">  
@@ -14,13 +14,13 @@
                 <div class="card-body">  
                     <form asp-action="Login" method="post">  
                         <div class="mb-3">  
-                            <label for="username" class="form-label">Username</label>  
+                            <label for="username" class="form-label">ID Number</label>  
                             <input  
                                 type="text"  
-                                id="username"  
-                                name="Username"  
-                                class="form-control"  
-                                placeholder="Enter your username"  
+                                id="ID Number"  
+                                name="Id"  
+                                class="form-control"
+                                placeholder="Enter your ID Number"  
                                 required  
                             />  
                         </div>  
@@ -45,7 +45,7 @@
                     {  
                         <div class="alert alert-danger mt-3" role="alert">  
                             Invalid username or password.  
-                        </div>  
+                        </div>
                     }  
                 </div>  
             </div>  

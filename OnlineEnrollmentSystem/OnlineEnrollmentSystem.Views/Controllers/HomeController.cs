@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector.Logging;
 using OnlineEnrollmentSystem.Data;
 using OnlineEnrollmentSystem.Models;
 using Org.BouncyCastle.Security;
@@ -30,7 +31,7 @@ namespace OnlineEnrollmentSystem.Controllers
 
 		// POST: /Home/Login  
 		[HttpPost]
-		public async Task<IActionResult> Login(UserModel loginRequest)
+		public async Task<IActionResult> Login(UserAuthModel loginRequest)
 		{
 			if (!ModelState.IsValid)
 			{
