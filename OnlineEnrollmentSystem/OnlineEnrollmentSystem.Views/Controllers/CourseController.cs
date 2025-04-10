@@ -81,8 +81,18 @@ namespace OnlineEnrollmentSystem.Controllers
 
 				viewModel.Courses = courses.Select(course =>
 				{
-					var courseEnrollments = enrollments.Where(e => e.CourseId == course.Id).ToList();
-					var courseStudents = students.Where(s => courseEnrollments.Select(e => e.StudentId).Contains(s.Id)).ToList();
+					var courseEnrollments = enrollments
+						.Where(e => e.CourseId == course.Id)
+						.ToList();
+
+					var courseStudents = students
+						.Where(s => courseEnrollments.Select(e => e.StudentId).Contains(s.Id))
+						.Select(s => new UserViewModel
+						{
+							Id = s.Id,
+							Username = s.Username
+						})
+						.ToList();
 
 					return new CourseViewModel
 					{
@@ -113,24 +123,26 @@ namespace OnlineEnrollmentSystem.Controllers
 
 			if (course == null)
 			{
-				return NotFound(); // Course not found
+				return NotFound();
 			}
 
-			// Get instructor
 			var instructor = await _context.Users.FirstOrDefaultAsync(u => u.Id == course.InstructorId);
 
-			// Get enrollments for this course
 			var enrollments = await _context.Enrollments
 				.Where(e => e.CourseId == id)
 				.ToListAsync();
 
-			// Get student user info
 			var studentIds = enrollments.Select(e => e.StudentId).ToList();
 			var students = await _context.Users
 				.Where(u => studentIds.Contains(u.Id))
 				.ToListAsync();
 
-			// Set ViewBag student data (for name, grade, and button)
+			var studentViewModels = students.Select(s => new UserViewModel
+			{
+				Id = s.Id,
+				Username = s.Username
+			}).ToList();
+
 			ViewBag.StudentData = students.Select(s => new
 			{
 				Name = s.Username,
@@ -146,7 +158,7 @@ namespace OnlineEnrollmentSystem.Controllers
 				Capacity = course.Capacity,
 				SlotsTaken = enrollments.Count,
 				Instructor = instructor?.Username ?? "Unknown",
-				Students = students
+				Students = studentViewModels
 			};
 
 			return View(viewModel);
@@ -155,6 +167,14 @@ namespace OnlineEnrollmentSystem.Controllers
 		[HttpPost]
 		public async Task<IActionResult> UpdateGrade(int studentId, int courseId, string grade)
 		{
+			var validGrades = new List<string> { "NGA", "0.0", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", "4.0" };
+
+			if (!validGrades.Contains(grade))
+			{
+				ModelState.AddModelError(string.Empty, "Invalid grade value.");
+				return RedirectToAction("View", new { id = courseId });
+			}
+
 			var enrollment = await _context.Enrollments
 				.FirstOrDefaultAsync(e => e.StudentId == studentId && e.CourseId == courseId);
 
@@ -164,9 +184,10 @@ namespace OnlineEnrollmentSystem.Controllers
 			}
 
 			enrollment.Grade = grade;
+
 			await _context.SaveChangesAsync();
 
-			return RedirectToAction("View", new { id = courseId }); // Redirect back to the course view
+			return RedirectToAction("View", new { id = courseId });
 		}
 
 

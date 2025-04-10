@@ -9,6 +9,6 @@ namespace OnlineEnrollmentSystem.Models
 		public int SlotsTaken { get; set; }
 		public bool IsEnrolled { get; set; }
 		public string Instructor { get; set; }
-		public List<UserModel> Students { get; set; }
+		public List<UserViewModel> Students { get; set; }
 	}
 }

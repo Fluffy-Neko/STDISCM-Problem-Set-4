@@ -1,12 +1,22 @@
-using Microsoft.AspNetCore.Mvc;  
-using OnlineEnrollmentSystem.Models;  
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OnlineEnrollmentSystem.Data;
+using OnlineEnrollmentSystem.Models;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace OnlineEnrollmentSystem.Controllers  
 {  
     public class HomeController : Controller  
-    {  
+    {
+		private readonly AppDbContext _context;
 
-        public IActionResult Index()  
+		public HomeController(AppDbContext context)
+		{
+			_context = context;
+		}
+
+		public IActionResult Index()  
         {  
             return View();  
         }  
@@ -15,23 +25,33 @@ namespace OnlineEnrollmentSystem.Controllers
         public IActionResult Login()  
         {  
             return View();  
-        }  
-
-        // POST: /Home/Login  
-        [HttpPost]  
-        public IActionResult Login(UserAuthModel loginRequest)  
-        {  
-            // For simplicity, just validate hardcoded credentials for now
-            if (loginRequest.Id ==  1 && loginRequest.Password == "password")  
-            {  
-                // Store user session (demo only, no real authentication yet)  
-                TempData["id"] = loginRequest.Id;
-				return RedirectToAction("Index", "Courses");
-			}  
-
-            ModelState.AddModelError(string.Empty, "Invalid credentials.");  
-            return View();  
         }
+
+		// POST: /Home/Login  
+		[HttpPost]
+		public async Task<IActionResult> Login(UserAuthModel loginRequest)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(loginRequest);
+			}
+
+			// Check for matching user in the database
+			var user = await _context.Users
+				.FirstOrDefaultAsync(u => u.Id == loginRequest.Id && u.Password == loginRequest.Password);
+
+			if (user != null)
+			{
+				TempData["id"] = user.Id;
+				TempData["role"] = user.Role; // You might use this to distinguish instructor vs student
+
+				return RedirectToAction("Index", "Courses");
+			}
+
+			ModelState.AddModelError(string.Empty, "Invalid credentials.");
+			return View(loginRequest);
+		}
+
 
 		// GET: /Home/Courses  
 		//public IActionResult Courses()
@@ -60,14 +80,14 @@ namespace OnlineEnrollmentSystem.Controllers
 
 		//// GET: /Home/Grades  
 		//public IActionResult Grades()  
-  //      {  
-  //          // Mock grades for demonstration  
-  //          List<EnrollmentModel> grades = new List<EnrollmentModel>  
-  //          {
+		//      {  
+		//          // Mock grades for demonstration  
+		//          List<EnrollmentModel> grades = new List<EnrollmentModel>  
+		//          {
 		//		new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseCode = "ST-MATH", Grade = "3.0" },
 		//		new EnrollmentModel { Id = 2, StudentId = 1, CourseId = 2, CourseCode = "ST-INTSY", Grade = "2.5" }
 		//	};  
-  //          return View(grades);  
-  //      }
-    }  
+		//          return View(grades);  
+		//      }
+	}
 }
