@@ -546,3 +546,11 @@ C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentS
 C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\obj\Debug\net9.0\OnlineEnrollmentSystem.Views.pdb
 C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\obj\Debug\net9.0\OnlineEnrollmentSystem.Views.genruntimeconfig.cache
 C:\Users\chris\Documents\Term 14\STDISCM\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\obj\Debug\net9.0\ref\OnlineEnrollmentSystem.Views.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

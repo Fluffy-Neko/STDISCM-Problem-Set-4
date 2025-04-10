@@ -1,4 +1,5 @@
 using OnlineEnrollmentSystem.Data;
+using OnlineEnrollmentSystem.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,12 +11,19 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 	options.UseMySQL(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddSingleton<TokenService>();
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+	options.IdleTimeout = TimeSpan.FromHours(2);
+	options.Cookie.HttpOnly = true;
+	options.Cookie.IsEssential = true;
+});
 
 builder.Services.AddHttpClient("Api", client =>
 {
     client.BaseAddress = new Uri("http://api-machine:5001/api/");
 });
-
 
 var app = builder.Build();
 
@@ -27,8 +35,10 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();  // Serve static files such as CSS, JS, Images, etc.
+app.UseStaticFiles();
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

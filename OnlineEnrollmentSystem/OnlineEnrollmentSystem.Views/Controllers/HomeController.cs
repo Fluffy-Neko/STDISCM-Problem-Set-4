@@ -1,35 +1,42 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using MySqlConnector.Logging;
 using OnlineEnrollmentSystem.Data;
 using OnlineEnrollmentSystem.Models;
+using OnlineEnrollmentSystem.Services;
 using Org.BouncyCastle.Security;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace OnlineEnrollmentSystem.Controllers  
-{  
-    public class HomeController : Controller  
-    {
+{
+	public class HomeController : Controller
+	{
 		private readonly AppDbContext _context;
+		private readonly IConfiguration _configuration;
+		private readonly TokenService _tokenService;
 
-		public HomeController(AppDbContext context)
+		// Modify the constructor to accept IConfiguration and TokenService as dependencies
+		public HomeController(AppDbContext context, IConfiguration configuration, TokenService tokenService)
 		{
 			_context = context;
+			_configuration = configuration;
+			_tokenService = tokenService;  // This is now correctly injected
 		}
 
-		public IActionResult Index()  
-        {  
-            return View();  
-        }  
+		public IActionResult Index()
+		{
+			return View();
+		}
 
-        // GET: /Home/Login  
-        public IActionResult Login()  
-        {  
-            return View();  
-        }
+		// GET: /Home/Login
+		public IActionResult Login()
+		{
+			return View();
+		}
 
-		// POST: /Home/Login  
+		// POST: /Home/Login
 		[HttpPost]
 		public async Task<IActionResult> Login(UserAuthModel loginRequest)
 		{
@@ -44,52 +51,27 @@ namespace OnlineEnrollmentSystem.Controllers
 
 			if (user != null)
 			{
-				TempData["id"] = user.Id;
-				TempData["role"] = user.Role;
+				// Generate JWT Token using the injected TokenService
+				var token = _tokenService.GenerateJwtToken(user.Id, user.Role.ToString());
 
+				// Store the token in a cookie (for example)
+				Response.Cookies.Append("jwt", token, new CookieOptions
+				{
+					HttpOnly = true,
+					Expires = DateTime.UtcNow.AddDays(1)
+				});
+
+				// Optionally, store user role and ID in the session if needed
+				HttpContext.Session.SetString("role", user.Role.ToString());
+				HttpContext.Session.SetInt32("userId", user.Id);
+				HttpContext.Session.SetString("username", user.Username);
+
+				// Redirect to the Courses page
 				return RedirectToAction("Index", "Courses");
 			}
 
 			ModelState.AddModelError(string.Empty, "Invalid credentials.");
 			return View(loginRequest);
 		}
-
-
-		// GET: /Home/Courses  
-		//public IActionResult Courses()
-		//{
-		//	var courses = new List<CourseModel>
-		//       {
-		//        new CourseModel { Id = 1, InstructorId = 1, CourseCode = "ST-MATH", Units = 3, Capacity = 40 },
-		//        new CourseModel { Id = 2, InstructorId = 2, CourseCode = "ST-INTSY", Units = 3, Capacity = 40 },
-		//		new CourseModel { Id = 3, InstructorId = 3, CourseCode = "CS-OPESY", Units = 3, Capacity = 40 }
-		//	};
-
-		//	var enrollments = new List<EnrollmentModel>
-		//       {
-		//        new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseName = "ST-MATH", Grade = "3.0" }
-		//       };
-
-		//	var viewModel = new CourseListViewModel
-		//	{
-		//	    Courses = courses,
-		//	    Enrollments = enrollments
-		//	};
-
-		//	return View(viewModel);
-		//}
-
-
-		//// GET: /Home/Grades  
-		//public IActionResult Grades()  
-		//      {  
-		//          // Mock grades for demonstration  
-		//          List<EnrollmentModel> grades = new List<EnrollmentModel>  
-		//          {
-		//		new EnrollmentModel { Id = 1, StudentId = 1, CourseId = 1, CourseCode = "ST-MATH", Grade = "3.0" },
-		//		new EnrollmentModel { Id = 2, StudentId = 1, CourseId = 2, CourseCode = "ST-INTSY", Grade = "2.5" }
-		//	};  
-		//          return View(grades);  
-		//      }
 	}
 }
