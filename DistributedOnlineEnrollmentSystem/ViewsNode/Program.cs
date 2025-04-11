@@ -1,3 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System.Text;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add MVC and views
@@ -17,8 +23,28 @@ builder.WebHost.UseUrls("http://localhost:5000");
 
 builder.Services.AddHttpClient("AuthApi", client =>
 {
-	client.BaseAddress = new Uri("http://localhost:5001/api/"); // AuthNode
+	client.BaseAddress = new Uri("http://localhost:5001/api/");
 });
+builder.Services.AddHttpClient("BasicFacilitiesApi", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5002/api/");
+});
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer("Bearer", options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+        };
+    });
 
 var app = builder.Build();
 
@@ -40,24 +66,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=Home}/{action=Index}/{id?}");
-
-// Routes for CoursesController
-app.MapControllerRoute(
-	name: "courses",
-	pattern: "courses/{action=Index}/{id?}",
-	defaults: new { controller = "Courses" }
-);
-
-// Routes for InstructorController
-app.MapControllerRoute(
-	name: "instructor",
-	pattern: "{controller=Instructor}/{action=Index}/{id?}"
-);
-
-// Routes for StudentController
-app.MapControllerRoute(
-	name: "student",
-	pattern: "{controller=Student}/{action=Index}/{id?}"
-);
 
 app.Run();

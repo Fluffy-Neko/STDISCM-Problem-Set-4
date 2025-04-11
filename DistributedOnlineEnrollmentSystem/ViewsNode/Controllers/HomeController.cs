@@ -59,7 +59,24 @@ namespace ViewsNode.Controllers
                 // Store the token in the session or a cookie
                 HttpContext.Session.SetString("JwtToken", token);
 
-                // Redirect to the Courses page (or wherever you want)
+                var handler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+                var jwtToken = handler.ReadJwtToken(token);
+
+                // Extract claims
+                var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.NameIdentifier);
+                var roleClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == System.Security.Claims.ClaimTypes.Role);
+
+                // Store them in session
+                if (userIdClaim != null)
+                {
+                    HttpContext.Session.SetInt32("UserId", int.Parse(userIdClaim.Value));
+                }
+                if (roleClaim != null)
+                {
+                    HttpContext.Session.SetString("Role", roleClaim.Value);
+                }
+
+                // Redirect to the Courses page
                 return RedirectToAction("Index", "Courses");
             }
             else
