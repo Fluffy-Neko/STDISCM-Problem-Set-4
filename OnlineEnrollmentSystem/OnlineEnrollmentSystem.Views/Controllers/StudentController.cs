@@ -66,7 +66,7 @@ namespace OnlineEnrollmentSystem.Controllers
 			if (alreadyEnrolled)
 			{
 				TempData["Error"] = "You're already enrolled in this course.";
-				return RedirectToAction("Index");
+				return RedirectToAction("Index", "Courses");
 			}
 
 			var course = await _context.Courses.FindAsync(courseId);
