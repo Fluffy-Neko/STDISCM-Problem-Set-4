@@ -1,0 +1,21 @@
+@model List<ViewsNode.Models.EnrollmentModel>
+
+<h1>Your Grades</h1>  
+
+<table>  
+    <thead>  
+        <tr>
+            <th>Course Code</th>
+            <th>Grade</th>
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var grade in Model)  
+        {  
+            <tr>  
+                <td>@grade.CourseCode</td>
+                <td>@grade.Grade</td>
+            </tr>  
+        }  
+    </tbody>  
+</table>

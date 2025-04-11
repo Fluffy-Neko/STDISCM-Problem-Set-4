@@ -1,0 +1,75 @@
+@model ViewsNode.Models.CourseListViewModel
+
+@{  
+    string userRole = ViewBag.UserRole;  
+}  
+
+<h1>@(userRole == "student" ? "Available Courses" : "Your Courses")</h1>  
+
+<table class="table table-striped table-bordered">  
+    <thead class="table-dark">  
+        <tr>  
+            <th>Course Code</th>  
+            <th>Units</th>  
+            <th>Slots</th>  
+            <th>@(userRole == "student" ? "Instructor" : "Enrolled Students")</th>  
+            <th>@(userRole == "student" ? "Enrollment Status" : "Actions")</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var course in Model.Courses)  
+        {  
+            <tr>  
+                <!-- Display course details -->  
+                <td>@course.CourseCode</td>  
+                <td>@course.Units</td>  
+                <td>@course.SlotsTaken / @course.Capacity</td>  
+
+                <!-- Display instructor name or list of students -->  
+                <td>  
+                    @if (userRole == "student")  
+                    {  
+                        <span>@course.Instructor</span>  
+                    }  
+                    else if (userRole == "instructor" && course.Students?.Any() == true)  
+                    {  
+                        <ul>  
+                            @foreach (var student in course.Students)  
+                            {  
+                                <li>@student.Username</li>  
+                            }  
+                        </ul>  
+                    }  
+                    else if (userRole == "instructor")  
+                    {  
+                        <span>No students enrolled</span>  
+                    }  
+                </td>  
+
+                <!-- Show enrollment or action buttons -->  
+                <td>  
+                    @if (userRole == "student")  
+                    {  
+                        @if (course.IsEnrolled)  
+                        {  
+                            <span style="color: green;">Enrolled</span>  
+                        }
+                        else
+                        {
+                        <form method="post" action="/Student/Enroll">
+                            <input type="hidden" name="CourseId" value="@course.Id" />
+                            <button class="btn btn-primary btn-sm" type="submit">Enroll</button>
+                        </form>
+                    }
+                }
+                else if (userRole == "instructor")
+                {
+                    <a href="@Url.Action("View", "Instructor", new { id = course.Id })">
+                        <button type="button">View</button>
+                    </a>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

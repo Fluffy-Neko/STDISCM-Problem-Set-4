@@ -1,0 +1,55 @@
+@model ViewsNode.Models.CourseViewModel
+
+<h1>Course Details</h1>
+
+<div>
+    <strong>Course Code:</strong> @Model.CourseCode
+</div>
+<div>
+    <strong>Units:</strong> @Model.Units
+</div>
+<div>
+    <strong>Slots Taken:</strong> @Model.SlotsTaken
+</div>
+<div>
+    <strong>Capacity:</strong> @Model.Capacity
+</div>
+<div>
+    <strong>Instructor:</strong> @Model.Instructor
+</div>
+
+<hr />
+
+@if (ViewBag.StudentData != null)
+{
+<h2>Enrolled Students</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Update Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in ViewBag.StudentData)
+        {
+        <tr>
+            <td>@s.Name</td>
+            <td>@s.Grade</td>
+            <td>
+                <form asp-action="UpdateGrade" method="post">
+                    <input type="hidden" name="studentId" value="@s.StudentId" />
+                    <input type="hidden" name="courseId" value="@Model.Id" />
+                    <input type="text" name="grade" value="@s.Grade" />
+                    <button type="submit" class="btn btn-sm btn-success">Save</button>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+
+<a href="/Courses" class="btn btn-primary">Back to Courses</a>
