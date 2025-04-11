@@ -53,23 +53,23 @@
                         @if (course.IsEnrolled)  
                         {  
                             <span style="color: green;">Enrolled</span>  
-                        }  
-                        else  
-                        {  
-                            <form method="post" action="/Courses/Enroll">  
-                                <input type="hidden" name="CourseId" value="@course.Id">  
-                                <button class="btn btn-primary btn-sm" type="submit">Enroll</button>  
-                            </form>  
-                        }  
-                    }  
-                    else if (userRole == "instructor")  
-                    {  
-                        <a href="@Url.Action("View", "Courses", new { id = course.Id })">  
-                            <button class="btn btn-secondary btn-sm">View</button>  
-                        </a>  
-                    }  
-                </td>  
-            </tr>  
-        }  
-    </tbody>  
+                        }
+                        else
+                        {
+                        <form method="post" action="/Student/Enroll">
+                            <input type="hidden" name="CourseId" value="@course.Id" />
+                            <button class="btn btn-primary btn-sm" type="submit">Enroll</button>
+                        </form>
+                    }
+                }
+                else if (userRole == "instructor")
+                {
+                    <a href="@Url.Action("View", "Instructor", new { id = course.Id })">
+                        <button type="button">View</button>
+                    </a>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
 </table>

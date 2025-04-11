@@ -1,0 +1,7 @@
+﻿# Ignore build artifacts
+appsettings.json
+**/bin/
+**/obj/
+*.dll
+*.pdb
+*.exe
