@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineEnrollmentSystem.Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ed4faa8317099af1c9ecacce02217e10dab52d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aff1566bef71980feea75fa16bb3cec44d2b517f")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineEnrollmentSystem.Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineEnrollmentSystem.Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

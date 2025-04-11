@@ -49,7 +49,18 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
 	name: "courses",
-	pattern: "{controller=Courses}/{action=Index}/{id?}"
+	pattern: "courses/{action=Index}/{id?}",
+	defaults: new { controller = "Courses" }
+);
+
+app.MapControllerRoute(
+	name: "instructor",
+	pattern: "{controller=Instructor}/{action=Index}/{id?}"
+);
+
+app.MapControllerRoute(
+	name: "student",
+	pattern: "{controller=Student}/{action=Index}/{id?}"
 );
 
 app.Run();
