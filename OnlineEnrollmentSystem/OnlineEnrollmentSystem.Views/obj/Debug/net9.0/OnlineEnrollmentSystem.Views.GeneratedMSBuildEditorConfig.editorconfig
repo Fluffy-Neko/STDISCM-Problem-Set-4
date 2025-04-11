@@ -17,57 +17,57 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OnlineEnrollmentSystem.Views
 build_property.RootNamespace = OnlineEnrollmentSystem.Views
-build_property.ProjectDir = D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\
+build_property.ProjectDir = C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Dane\DLSU-STUFF\AY2024-2025\Term_2\STDISCM\STDISCM-P4\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views
+build_property.MSBuildProjectDirectory = C:\Users\merca\Documents\GitHub\STDISCM-Problem-Set-4\OnlineEnrollmentSystem\OnlineEnrollmentSystem.Views
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Courses/Index.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Courses/Grades.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xHcmFkZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Courses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Index.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Courses/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Login.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Privacy.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Instructor/View.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5zdHJ1Y3RvclxWaWV3LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Shared/Error.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Student/Grades.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxHcmFkZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/_ViewImports.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/_ViewStart.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Dane/DLSU-STUFF/AY2024-2025/Term_2/STDISCM/STDISCM-P4/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Shared/_Layout.cshtml]
+[C:/Users/merca/Documents/GitHub/STDISCM-Problem-Set-4/OnlineEnrollmentSystem/OnlineEnrollmentSystem.Views/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-3yr84vwrwe

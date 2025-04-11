@@ -18,6 +18,24 @@
                     <ul class="navbar-nav ms-auto">  
                         <li class="nav-item"><a class="nav-link" href="/Home/Index">Home</a></li>  
                         <li class="nav-item"><a class="nav-link" href="/Privacy">Privacy</a></li>  
+
+                        @if (Context.Items["UserId"] != null || Context.Session.GetInt32("UserId") != null)  
+                        {  
+                            <!-- Retrieve and display the username -->  
+                            @if (Context.Session.GetString("Username") != null)  
+                            {  
+                                <li class="nav-item">  
+                                    <span class="nav-link"><strong>@Context.Session.GetString("Username")</strong></span>  
+                                </li>  
+                            }  
+
+                            <!-- Logout button -->  
+                            <li class="nav-item">  
+                                <form method="post" asp-controller="Home" asp-action="Logout" style="display:inline;">  
+                                    <button class="btn btn-link nav-link" type="submit">Logout</button>  
+                                </form>  
+                            </li>  
+                        }  
                     </ul>  
                 </div>  
             </div>  
