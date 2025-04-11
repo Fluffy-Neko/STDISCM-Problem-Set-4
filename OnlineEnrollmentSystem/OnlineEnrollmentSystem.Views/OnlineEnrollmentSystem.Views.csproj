@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <ItemGroup>
+  <!-- <ItemGroup>
     <ProjectReference Include="..\OnlineEnrollmentSystem.API\OnlineEnrollmentSystem.API.csproj" />
     <ProjectReference Include="..\OnlineEnrollmentSystem.Auth\OnlineEnrollmentSystem.Auth.csproj" />
     <ProjectReference Include="..\OnlineEnrollmentSystem.Data\OnlineEnrollmentSystem.Data.csproj" />
-  </ItemGroup>
+  </ItemGroup> -->
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />

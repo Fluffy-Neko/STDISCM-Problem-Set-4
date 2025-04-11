@@ -1334,40 +1334,6 @@
         "runtime": {
           "lib/net8.0/ZstdSharp.dll": {}
         }
-      },
-      "OnlineEnrollmentSystem.API/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/OnlineEnrollmentSystem.API.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OnlineEnrollmentSystem.API.dll": {}
-        }
-      },
-      "OnlineEnrollmentSystem.Auth/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/OnlineEnrollmentSystem.Auth.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OnlineEnrollmentSystem.Auth.dll": {}
-        }
-      },
-      "OnlineEnrollmentSystem.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "9.0.3",
-          "Pomelo.EntityFrameworkCore.MySql": "8.0.3"
-        },
-        "compile": {
-          "bin/placeholder/OnlineEnrollmentSystem.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OnlineEnrollmentSystem.Data.dll": {}
-        }
       }
     }
   },
@@ -4252,21 +4218,6 @@
         "zstdsharp.port.0.8.0.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
-    },
-    "OnlineEnrollmentSystem.API/1.0.0": {
-      "type": "project",
-      "path": "../OnlineEnrollmentSystem.API/OnlineEnrollmentSystem.API.csproj",
-      "msbuildProject": "../OnlineEnrollmentSystem.API/OnlineEnrollmentSystem.API.csproj"
-    },
-    "OnlineEnrollmentSystem.Auth/1.0.0": {
-      "type": "project",
-      "path": "../OnlineEnrollmentSystem.Auth/OnlineEnrollmentSystem.Auth.csproj",
-      "msbuildProject": "../OnlineEnrollmentSystem.Auth/OnlineEnrollmentSystem.Auth.csproj"
-    },
-    "OnlineEnrollmentSystem.Data/1.0.0": {
-      "type": "project",
-      "path": "../OnlineEnrollmentSystem.Data/OnlineEnrollmentSystem.Data.csproj",
-      "msbuildProject": "../OnlineEnrollmentSystem.Data/OnlineEnrollmentSystem.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4275,9 +4226,6 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.3",
       "MySql.EntityFrameworkCore >= 9.0.0",
-      "OnlineEnrollmentSystem.API >= 1.0.0",
-      "OnlineEnrollmentSystem.Auth >= 1.0.0",
-      "OnlineEnrollmentSystem.Data >= 1.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 8.0.3"
     ]
   },
@@ -4307,17 +4255,7 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {
-            "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj": {
-              "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.API\\OnlineEnrollmentSystem.API.csproj"
-            },
-            "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj": {
-              "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Auth\\OnlineEnrollmentSystem.Auth.csproj"
-            },
-            "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj": {
-              "projectPath": "C:\\Users\\chris\\Documents\\Term 14\\STDISCM\\STDISCM-Problem-Set-4\\OnlineEnrollmentSystem\\OnlineEnrollmentSystem.Data\\OnlineEnrollmentSystem.Data.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
