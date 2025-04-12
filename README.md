@@ -44,5 +44,9 @@ Now listening on: http://localhost:5000
     Grades Page: http://localhost:5000/Home/Grades
 
 Demo Login Credentials: 
-    Username: student
+[Student]
+    Username: 1
+    Password: password
+[Instructor]
+    Username: 2
     Password: password
