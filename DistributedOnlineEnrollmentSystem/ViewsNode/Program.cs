@@ -29,6 +29,10 @@ builder.Services.AddHttpClient("BasicFacilitiesApi", client =>
 {
     client.BaseAddress = new Uri("http://localhost:5002/api/");
 });
+builder.Services.AddHttpClient("InstructorApi", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5003/api/");
+});
 
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
