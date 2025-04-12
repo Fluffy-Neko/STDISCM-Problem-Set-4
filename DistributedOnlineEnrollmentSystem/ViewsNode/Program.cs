@@ -33,6 +33,10 @@ builder.Services.AddHttpClient("InstructorApi", client =>
 {
     client.BaseAddress = new Uri("http://localhost:5003/api/");
 });
+builder.Services.AddHttpClient("StudentApi", client =>
+{
+    client.BaseAddress = new Uri("http://localhost:5004/api/");
+});
 
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
