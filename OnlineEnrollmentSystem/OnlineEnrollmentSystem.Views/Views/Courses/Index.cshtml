@@ -2,6 +2,14 @@
 
 @{  
     string userRole = ViewBag.UserRole;  
+
+    if (Model == null || Model.Courses == null)  
+    {  
+        // Redirect to the Error.cshtml view  
+        Layout = null; // Prevent layout rendering if redirecting to error  
+        @await Html.PartialAsync("~/Views/Shared/Error.cshtml");  
+        return;  
+    } 
 }  
 
 <h1>@(userRole == "student" ? "Available Courses" : "Your Courses")</h1>  
