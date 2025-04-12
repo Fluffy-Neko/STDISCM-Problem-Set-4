@@ -2,9 +2,25 @@
 
 @{  
     string userRole = ViewBag.UserRole;  
+
+    if (Model == null || Model.Courses == null)  
+    {  
+        // Redirect to the Error.cshtml view  
+        Layout = null; // Prevent layout rendering if redirecting to error  
+        @await Html.PartialAsync("~/Views/Shared/Error.cshtml");  
+        return;  
+    } 
 }  
 
 <h1>@(userRole == "student" ? "Available Courses" : "Your Courses")</h1>  
+
+@if (userRole == "student")  
+{  
+    <!-- Button to navigate to Grades.cshtml -->  
+    <a href="@Url.Action("Grades", "Student")" class="btn btn-success" style="margin-bottom: 15px;">  
+        View Grades  
+    </a>  
+}  
 
 <table class="table table-striped table-bordered">  
     <thead class="table-dark">  
@@ -53,23 +69,23 @@
                         @if (course.IsEnrolled)  
                         {  
                             <span style="color: green;">Enrolled</span>  
-                        }
-                        else
-                        {
-                        <form method="post" action="/Student/Enroll">
-                            <input type="hidden" name="CourseId" value="@course.Id" />
-                            <button class="btn btn-primary btn-sm" type="submit">Enroll</button>
-                        </form>
-                    }
-                }
-                else if (userRole == "instructor")
-                {
-                    <a href="@Url.Action("View", "Instructor", new { id = course.Id })">
-                        <button type="button">View</button>
-                    </a>
-                }
-            </td>
-        </tr>
-        }
-    </tbody>
+                        }  
+                        else  
+                        {  
+                        <form method="post" action="/Student/Enroll">  
+                            <input type="hidden" name="CourseId" value="@course.Id" />  
+                            <button class="btn btn-primary btn-sm" type="submit">Enroll</button>  
+                        </form>  
+                    }  
+                }  
+                else if (userRole == "instructor")  
+                {  
+                    <a href="@Url.Action("View", "Instructor", new { id = course.Id })">  
+                        <button type="button">View</button>  
+                    </a>  
+                }  
+            </td>  
+        </tr>  
+        }  
+    </tbody>  
 </table>
