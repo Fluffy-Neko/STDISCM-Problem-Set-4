@@ -31,7 +31,7 @@
 
 <hr />
 
-@if (ViewBag.StudentData != null)
+@if (Model.Students != null)
 {
 <h2>Enrolled Students</h2>
 
@@ -44,14 +44,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var s in ViewBag.StudentData)
+        @foreach (var s in Model.Students)
         {
         <tr>
-            <td>@s.Name</td>
+            <td>@s.Username</td>
             <td>@s.Grade</td>
             <td>
                 <form asp-action="UpdateGrade" method="post">
-                    <input type="hidden" name="studentId" value="@s.StudentId" />
+                    <input type="hidden" name="studentId" value="@s.Id" />
                     <input type="hidden" name="courseId" value="@Model.Id" />
                     <input type="text" name="grade" value="@s.Grade" />
                     <button type="submit" class="btn btn-sm btn-success">Save</button>
