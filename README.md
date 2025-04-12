@@ -43,12 +43,10 @@ Now listening on: http://localhost:5000
     Course Page: http://localhost:5000/Home/Courses
     Grades Page: http://localhost:5000/Home/Grades
 
-Demo Login Credentials:
-
-[Student]
+Demo Login Credentials: <br>
+[Student] <br>
     Username: 1
     Password: password
-    
-[Instructor]
+[Instructor] <br>
     Username: 2
     Password: password
