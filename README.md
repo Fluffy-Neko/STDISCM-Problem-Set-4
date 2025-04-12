@@ -45,8 +45,8 @@ Now listening on: http://localhost:5000
 
 Demo Login Credentials: <br>
 [Student] <br>
-    Username: 1
+    Username: 1 <br>
     Password: password <br>
 [Instructor] <br>
-    Username: 2
+    Username: 2 <br>
     Password: password
