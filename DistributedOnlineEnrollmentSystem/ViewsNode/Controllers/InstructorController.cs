@@ -43,6 +43,7 @@ namespace ViewNodes.Controllers
 
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             var viewModel = JsonSerializer.Deserialize<CourseViewModel>(json, options);
+            Console.WriteLine($"viewModel: {viewModel}");
 
             return View(viewModel);
         }

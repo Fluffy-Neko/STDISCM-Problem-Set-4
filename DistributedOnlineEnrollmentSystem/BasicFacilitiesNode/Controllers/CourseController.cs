@@ -19,7 +19,7 @@ namespace BasicFacilitiesNode.Controllers
             _context = context;
         }
 
-        // GET: /Courses?userId=123&role=student
+        // GET: /Courses/Index
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetCourses()
