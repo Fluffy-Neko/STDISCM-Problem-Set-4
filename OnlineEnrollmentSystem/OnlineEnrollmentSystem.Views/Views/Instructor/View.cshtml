@@ -1,5 +1,16 @@
 @model OnlineEnrollmentSystem.Models.CourseViewModel
 
+@{  
+    // Check if the model or critical data is null (indicating the page is "down")  
+    if (Model == null)  
+    {  
+        // Render the Error.cshtml view directly  
+        Layout = null; // Disabling the layout for the error page  
+        @await Html.PartialAsync("~/Views/Shared/Error.cshtml");  
+        return;  
+    }  
+} 
+
 <h1>Course Details</h1>
 
 <div>
