@@ -31,10 +31,13 @@ namespace ViewNodes.Controllers
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwt);
 
             //var response = await client.GetAsync($"/api/Instructor/View?id={id}");
-            var response = await client.GetAsync("http://instructornode:8080/api/home/login");
+            var response = await client.GetAsync($"http://instructornode:8080/api/Instructor/View?id={id}");
+            var errorContent = await response.Content.ReadAsStringAsync();
             Console.WriteLine("Sensei Lily:");
             Console.WriteLine(response);
             Console.WriteLine($"id: {id}");
+            Console.WriteLine($"Error: {response.StatusCode}");
+            Console.WriteLine($"Details: {errorContent}");
             if (!response.IsSuccessStatusCode)
                 return RedirectToAction("Index", "Courses");
 
