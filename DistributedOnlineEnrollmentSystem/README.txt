@@ -1,0 +1,1 @@
+Set up a database in MySQL workbench using the populateP4.sql file inside the directory. Then, modify the connection string in the appsettings.json file in each Node directory. Each directory here is a node in itself, and is a separate c# project, so to run each node, run "dotnet run" in the CLI of each directory then connect to localhost:5000.
