@@ -1,0 +1,6 @@
+@AuthNode_HostAddress = http://localhost:5001
+
+GET {{AuthNode_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

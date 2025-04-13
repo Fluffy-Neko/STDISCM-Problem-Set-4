@@ -63,7 +63,7 @@ namespace OnlineEnrollmentSystem.Controllers
 			{
 				Name = s.Username,
 				StudentId = s.Id,
-				Grade = enrollments.FirstOrDefault(e => e.StudentId == s.Id)?.Grade ?? "N/A"
+				Grade = enrollments.FirstOrDefault(e => e.StudentId == s.Id)?.Grade ?? "NGA"
 			}).ToList();
 
 			var viewModel = new CourseViewModel

@@ -1,0 +1,25 @@
+﻿@model ViewsNode.Models.ErrorViewModel  
+@{  
+    ViewData["Title"] = "Error";  
+}  
+
+<div class="container text-center my-5">  
+    <h1 class="text-danger display-4">Node Unreachable</h1>  
+    <h2 class="text-muted">It seems the node responsible for this part of the site is currently not functioning.</h2>  
+    <p class="mt-3">  
+        Please try again later or navigate to another section of the site.  
+    </p>  
+
+    <!-- Show Request ID for debugging (conditionally) -->  
+    @if (Model.ShowRequestId)  
+    {  
+        <p class="text-muted mt-3">  
+            <strong>Request ID:</strong> <code>@Model.RequestId</code>  
+        </p>  
+    }  
+
+    <!-- "Go Back" Button -->  
+    <div class="mt-4">  
+        <button class="btn btn-primary btn-lg" onclick="history.back()">Go Back</button>  
+    </div>  
+</div>

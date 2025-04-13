@@ -1,0 +1,66 @@
+@model ViewsNode.Models.CourseViewModel
+
+@{  
+    // Check if the model or critical data is null (indicating the page is "down")  
+    if (Model == null)  
+    {  
+        // Render the Error.cshtml view directly  
+        Layout = null; // Disabling the layout for the error page  
+        @await Html.PartialAsync("~/Views/Shared/Error.cshtml");  
+        return;  
+    }  
+} 
+
+<h1>Course Details</h1>
+
+<div>
+    <strong>Course Code:</strong> @Model.CourseCode
+</div>
+<div>
+    <strong>Units:</strong> @Model.Units
+</div>
+<div>
+    <strong>Slots Taken:</strong> @Model.SlotsTaken
+</div>
+<div>
+    <strong>Capacity:</strong> @Model.Capacity
+</div>
+<div>
+    <strong>Instructor:</strong> @Model.Instructor
+</div>
+
+<hr />
+
+@if (Model.Students != null)
+{
+<h2>Enrolled Students</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Update Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model.Students)
+        {
+        <tr>
+            <td>@s.Username</td>
+            <td>@s.Grade</td>
+            <td>
+                <form asp-action="UpdateGrade" method="post">
+                    <input type="hidden" name="studentId" value="@s.Id" />
+                    <input type="hidden" name="courseId" value="@Model.Id" />
+                    <input type="text" name="grade" value="@s.Grade" />
+                    <button type="submit" class="btn btn-sm btn-success">Save</button>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+}
+
+<a href="/Courses" class="btn btn-primary">Back to Courses</a>

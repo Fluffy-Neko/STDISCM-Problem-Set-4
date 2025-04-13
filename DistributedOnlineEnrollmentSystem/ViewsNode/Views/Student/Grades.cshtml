@@ -1,0 +1,37 @@
+@model List<ViewsNode.Models.EnrollmentModel>
+
+@{  
+    // Check if the model or critical data is null (indicating the page is "down")  
+    if (Model == null)  
+    {  
+        // Render the Error.cshtml view directly  
+        Layout = null; // Disabling the layout for the error page  
+        @await Html.PartialAsync("~/Views/Shared/Error.cshtml");  
+        return;  
+    }  
+} 
+
+<h1 class="text-center mt-3 mb-4">Your Grades</h1>  
+
+<table class="table table-striped table-bordered">  
+    <thead class="table-dark text-center">  
+        <tr>  
+            <th>Course Code</th>  
+            <th>Grade</th>  
+        </tr>  
+    </thead>  
+    <tbody>  
+        @foreach (var grade in Model)  
+        {  
+            <tr>  
+                <td class="text-center align-middle">@grade.CourseCode</td>  
+                <td class="text-center align-middle">@grade.Grade</td>  
+            </tr>  
+        }  
+    </tbody>  
+</table>
+
+<div class="text-center mt-4">  
+    <a href="@Url.Action("Index", "Courses")" class="btn btn-primary">  
+        Back to Courses  
+    </a>
