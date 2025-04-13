@@ -10,6 +10,27 @@ Database Setup
 2. Populate schema using PopulateP4.sql
 3. Configure appsettings.json of every node accordingly
 
+Appsettings.json Setup
+1. appsettings.json is not in this repository due to it being in the .gitignore
+2. Add appsettings.json to every node
+3. Paste the following code inside appsettings.json:
+{
+    "Logging": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft.AspNetCore": "Warning"
+        }
+    },
+    "ConnectionStrings": {
+        "DefaultConnection": "server=host.docker.internal;port=3306;database=onlineenrollmentsystem;user=root;password=root;"
+    },
+    "Jwt": {
+        "SecretKey": "ThisIsTheSuperSecretKeyOfLilyThatIsOnlyHereForTestingPurposes",
+        "Issuer": "http://localhost:5001",
+        "Audience": "http://localhost:5002"
+    }
+}
+
 To run:
 1. Go to root directory of solution
 2. Run "docker-compose up --build"
