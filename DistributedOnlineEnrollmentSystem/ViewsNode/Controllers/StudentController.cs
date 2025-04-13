@@ -27,7 +27,8 @@ namespace ViewsNode.Controllers
             _httpClient.DefaultRequestHeaders.Authorization =
                 new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", jwtToken);
 
-            var response = await _httpClient.GetAsync("Student/Grades");
+            //var response = await _httpClient.GetAsync("Student/Grades");
+            var response = await _httpClient.GetAsync("http://studentnode:8080/api/student/grades");
             if (!response.IsSuccessStatusCode)
                 return StatusCode((int)response.StatusCode);
 
@@ -55,7 +56,9 @@ namespace ViewsNode.Controllers
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
 
-            var response = await _httpClient.PostAsync("Student/Enroll", content);
+            //var response = await _httpClient.PostAsync("Student/Enroll", content);
+            var response = await _httpClient.PostAsync("http://studentnode:8080/api/student/enroll", content);
+
             Console.WriteLine("Student Lily:");
             Console.WriteLine(response);
 

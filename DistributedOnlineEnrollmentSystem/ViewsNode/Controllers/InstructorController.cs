@@ -30,7 +30,8 @@ namespace ViewNodes.Controllers
             var client = _httpClientFactory.CreateClient("InstructorApi");
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwt);
 
-            var response = await client.GetAsync($"/api/Instructor/View?id={id}");
+            //var response = await client.GetAsync($"/api/Instructor/View?id={id}");
+            var response = await client.GetAsync("http://instructornode:8080/api/home/login");
             Console.WriteLine("Sensei Lily:");
             Console.WriteLine(response);
             Console.WriteLine($"id: {id}");
@@ -70,7 +71,8 @@ namespace ViewNodes.Controllers
             var json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await client.PostAsync("Instructor/UpdateGrade", content);
+            //var response = await client.PostAsync("Instructor/UpdateGrade", content);
+            var response = await client.PostAsync("http://instructornode:8080/api/instructor/updategrade", content);
             Console.WriteLine("Sensei Lily:");
             Console.WriteLine(response);
 

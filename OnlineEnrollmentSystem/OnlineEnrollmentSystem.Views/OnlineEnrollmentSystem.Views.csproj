@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
     <ProjectReference Include="..\OnlineEnrollmentSystem.API\OnlineEnrollmentSystem.API.csproj" />
@@ -9,7 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3"/>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -17,6 +18,7 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="9.0.0" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.8.0" />
@@ -26,6 +28,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>ecdbfd64-da9d-414b-b79a-27badd142d81</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
 </Project>

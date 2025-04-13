@@ -4,27 +4,30 @@
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 USER $APP_UID
 WORKDIR /app
-ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
+EXPOSE 8081
 
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ViewsNode/ViewsNode.csproj", "ViewsNode/"]
-RUN dotnet restore "./ViewsNode/ViewsNode.csproj"
+COPY ["OnlineEnrollmentSystem.Views/OnlineEnrollmentSystem.Views.csproj", "OnlineEnrollmentSystem.Views/"]
+COPY ["OnlineEnrollmentSystem.API/OnlineEnrollmentSystem.API.csproj", "OnlineEnrollmentSystem.API/"]
+COPY ["OnlineEnrollmentSystem.Auth/OnlineEnrollmentSystem.Auth.csproj", "OnlineEnrollmentSystem.Auth/"]
+COPY ["OnlineEnrollmentSystem.Data/OnlineEnrollmentSystem.Data.csproj", "OnlineEnrollmentSystem.Data/"]
+RUN dotnet restore "./OnlineEnrollmentSystem.Views/OnlineEnrollmentSystem.Views.csproj"
 COPY . .
-WORKDIR "/src/ViewsNode"
-RUN dotnet build "./ViewsNode.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/OnlineEnrollmentSystem.Views"
+RUN dotnet build "./OnlineEnrollmentSystem.Views.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./ViewsNode.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./OnlineEnrollmentSystem.Views.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ViewsNode.dll"]
+ENTRYPOINT ["dotnet", "OnlineEnrollmentSystem.Views.dll"]

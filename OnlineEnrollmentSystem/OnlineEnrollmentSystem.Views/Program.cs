@@ -22,7 +22,7 @@ builder.Services.AddSession(options =>
 
 builder.Services.AddHttpClient("Api", client =>
 {
-    client.BaseAddress = new Uri("http://api-machine:5001/api/");
+    client.BaseAddress = new Uri("http://api-machine:3000/api/");
 });
 
 var app = builder.Build();

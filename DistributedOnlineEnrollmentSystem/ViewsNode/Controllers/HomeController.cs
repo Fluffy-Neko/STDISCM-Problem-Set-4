@@ -46,7 +46,10 @@ namespace ViewsNode.Controllers
                 System.Text.Encoding.UTF8,  
                 "application/json");  
 
-            var response = await client.PostAsync("home/login", content);  
+            //var response = await client.PostAsync("home/login", content);
+
+            var response = await client.PostAsync("http://authnode:8080/api/home/login", content);
+
             Console.WriteLine($"{response}");  
 
             if (response.IsSuccessStatusCode)  
