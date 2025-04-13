@@ -46,36 +46,28 @@
                     @if (userRole == "student")  
                     {  
                         <span>@course.Instructor</span>  
-                    }  
-                    else if (userRole == "instructor" && course.Students?.Any() == true)  
-                    {  
-                        <ul>  
-                            @foreach (var student in course.Students)  
-                            {  
-                                <li>@student.Username</li>  
-                            }  
-                        </ul>  
-                    }  
-                    else if (userRole == "instructor")  
-                    {  
-                        <span>No students enrolled</span>  
-                    }  
+                    }
                 </td>  
 
                 <!-- Show enrollment or action buttons -->  
                 <td>  
                     @if (userRole == "student")  
-                    {  
-                        @if (course.IsEnrolled)  
-                        {  
-                            <span style="color: green;">Enrolled</span>  
-                        }  
-                        else  
-                        {  
-                        <form method="post" action="/Student/Enroll">  
-                            <input type="hidden" name="CourseId" value="@course.Id" />  
-                            <button class="btn btn-primary btn-sm" type="submit">Enroll</button>  
-                        </form>  
+                    {
+                        @if (course.IsEnrolled)
+                        {
+                            <span style="color: green;">Enrolled</span>
+                        }
+                        else if (!course.IsFull)
+                        {
+                            <form method="post" action="/Student/Enroll">  
+                                <input type="hidden" name="CourseId" value="@course.Id" />  
+                                <button class="btn btn-primary btn-sm" type="submit">Enroll</button>  
+                            </form>
+                        }
+                        else if (course.IsFull)
+                        {
+                            <span style="color: red;">Full</span>
+                        }
                     }  
                 }  
                 else if (userRole == "instructor")  

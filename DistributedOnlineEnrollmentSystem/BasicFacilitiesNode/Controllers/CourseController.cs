@@ -52,6 +52,7 @@ namespace BasicFacilitiesNode.Controllers
                         Capacity = course.Capacity,
                         SlotsTaken = courseEnrollments.Count(),
                         IsEnrolled = enrollments.Any(e => e.CourseId == course.Id),
+                        isFull = courseEnrollments.Count() >= course.Capacity,
                         Instructor = instructor?.Username ?? "Unknown",
                     };
                 }).ToList();

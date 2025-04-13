@@ -59,6 +59,13 @@ namespace StudentNode.Controllers
             if (course == null)
                 return NotFound("Course not found.");
 
+            var courseEnrollments = await _context.Enrollments.Where(e => e.CourseId == course.Id).ToListAsync();
+            var courseSlotsTaken = courseEnrollments.Count();
+            var courseCapacity = course.Capacity;
+
+            if (courseSlotsTaken >= courseCapacity)
+                return BadRequest("Course already full capacity.");
+
             var enrollment = new EnrollmentModel
             {
                 StudentId = userId,
