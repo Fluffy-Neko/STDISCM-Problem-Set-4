@@ -1,11 +1,11 @@
 # Base image for runtime
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 WORKDIR /app
+ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
-EXPOSE 8081
 
 # Build image
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
@@ -14,7 +14,8 @@ COPY ["StudentNode/StudentNode.csproj", "StudentNode/"]
 RUN dotnet restore "StudentNode/StudentNode.csproj"
 
 # Copy only the StudentNode project files
-COPY StudentNode/. ./StudentNode/
+#COPY StudentNode/. ./StudentNode/
+COPY . .
 WORKDIR /src/StudentNode
 RUN dotnet build "StudentNode.csproj" -c $BUILD_CONFIGURATION -o /app/build
 

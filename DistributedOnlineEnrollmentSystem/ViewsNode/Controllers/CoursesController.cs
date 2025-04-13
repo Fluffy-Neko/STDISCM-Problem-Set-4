@@ -33,7 +33,8 @@ namespace ViewsNode.Controllers
             // Set the Authorization header with the JWT token
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", jwtToken);
 
-            var response = await client.GetAsync("/Courses");
+            //var response = await client.GetAsync("/Courses");
+            var response = await client.GetAsync("http://basicfacilitiesnode:8080/courses");
             Console.WriteLine("LILY");
             Console.WriteLine(response);
 

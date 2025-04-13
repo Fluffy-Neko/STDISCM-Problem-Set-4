@@ -51,6 +51,7 @@ namespace OnlineEnrollmentSystem.Controllers
 				return View(loginRequest);
 			}
 
+			Console.WriteLine($"Login Requestion: [{loginRequest.Id}]|[{loginRequest.Password}]");
 			// Check for matching user in the database
 			var user = await _context.Users
 				.FirstOrDefaultAsync(u => u.Id == loginRequest.Id && u.Password == loginRequest.Password);

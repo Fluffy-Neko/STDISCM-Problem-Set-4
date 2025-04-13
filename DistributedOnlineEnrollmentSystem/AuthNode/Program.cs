@@ -12,7 +12,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Add JWT service
 builder.Services.AddScoped<TokenService>();
-builder.WebHost.UseUrls("http://localhost:5001");
 
 // Add controllers and Swagger
 builder.Services.AddControllers();
