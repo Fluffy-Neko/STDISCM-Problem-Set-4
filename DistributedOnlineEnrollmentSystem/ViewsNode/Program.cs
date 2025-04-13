@@ -17,28 +17,25 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromHours(2);  
     options.Cookie.HttpOnly = true;  
     options.Cookie.IsEssential = true;  
-});  
+});
 
-// Set the port for the ViewsNode to run on  
-builder.WebHost.UseUrls("http://localhost:5000");  
+builder.Services.AddHttpClient("AuthApi", client =>
+{
+    client.BaseAddress = new Uri("http://authnode/api/");
+});
+builder.Services.AddHttpClient("BasicFacilitiesApi", client =>
+{
+    client.BaseAddress = new Uri("http://basicfacilitiesnode/api/");
+});
+builder.Services.AddHttpClient("InstructorApi", client =>
+{
+    client.BaseAddress = new Uri("http://instructornode/api/");
+});
+builder.Services.AddHttpClient("StudentApi", client =>
+{
+    client.BaseAddress = new Uri("http://studentnode/api/");
+});
 
-// Register HTTP clients for different APIs  
-builder.Services.AddHttpClient("AuthApi", client =>  
-{  
-    client.BaseAddress = new Uri("http://localhost:5001/api/");  
-});  
-builder.Services.AddHttpClient("BasicFacilitiesApi", client =>  
-{  
-    client.BaseAddress = new Uri("http://localhost:5002/api/");  
-});  
-builder.Services.AddHttpClient("InstructorApi", client =>  
-{  
-    client.BaseAddress = new Uri("http://localhost:5003/api/");  
-});  
-builder.Services.AddHttpClient("StudentApi", client =>  
-{  
-    client.BaseAddress = new Uri("http://localhost:5004/api/");  
-});  
 
 // Add JWT authentication  
 builder.Services.AddAuthentication("Bearer")  

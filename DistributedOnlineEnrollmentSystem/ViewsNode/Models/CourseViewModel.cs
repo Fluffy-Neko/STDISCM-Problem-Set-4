@@ -9,6 +9,7 @@ namespace ViewsNode.Models
 		public int SlotsTaken { get; set; }
 		public bool IsEnrolled { get; set; }
 		public string Instructor { get; set; }
+		public bool IsFull { get; set; }
 		public List<UserViewModel> Students { get; set; }
 	}
 }

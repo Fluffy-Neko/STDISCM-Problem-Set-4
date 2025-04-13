@@ -19,7 +19,7 @@ namespace BasicFacilitiesNode.Controllers
             _context = context;
         }
 
-        // GET: /Courses?userId=123&role=student
+        // GET: /Courses/Index
         [Authorize]
         [HttpGet]
         public async Task<IActionResult> GetCourses()
@@ -52,6 +52,7 @@ namespace BasicFacilitiesNode.Controllers
                         Capacity = course.Capacity,
                         SlotsTaken = courseEnrollments.Count(),
                         IsEnrolled = enrollments.Any(e => e.CourseId == course.Id),
+                        isFull = courseEnrollments.Count() >= course.Capacity,
                         Instructor = instructor?.Username ?? "Unknown",
                     };
                 }).ToList();

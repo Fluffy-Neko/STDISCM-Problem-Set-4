@@ -1,0 +1,40 @@
+services:
+  viewsnode:
+    build:
+      context: .
+      dockerfile: ViewsNode/Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - authnode
+      - basicfacilitiesnode
+      - instructornode
+      - studentnode
+
+  authnode:
+    build:
+      context: .
+      dockerfile: AuthNode/Dockerfile
+    ports:
+      - "5001:80"
+
+  basicfacilitiesnode:
+    build:
+      context: .
+      dockerfile: BasicFacilitiesNode/Dockerfile
+    ports:
+      - "5002:80"
+
+  instructornode:
+    build:
+      context: .
+      dockerfile: InstructorNode/Dockerfile
+    ports:
+      - "5003:80"
+
+  studentnode:
+    build:
+      context: .
+      dockerfile: StudentNode/Dockerfile
+    ports:
+      - "5004:80"
