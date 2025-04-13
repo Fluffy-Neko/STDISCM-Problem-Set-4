@@ -28,7 +28,10 @@
             <th>Course Code</th>  
             <th>Units</th>  
             <th>Slots</th>  
-            <th>@(userRole == "student" ? "Instructor" : "Enrolled Students")</th>  
+            @if (userRole == "student")  
+            {  
+                <th>Instructor</th>  
+            }  
             <th>@(userRole == "student" ? "Enrollment Status" : "Actions")</th>  
         </tr>  
     </thead>  
@@ -41,24 +44,33 @@
                 <td>@course.Units</td>  
                 <td>@course.SlotsTaken / @course.Capacity</td>  
 
-                <!-- Display instructor name or list of students -->  
+                <!-- Display instructor name only for students -->  
+                @if (userRole == "student")  
+                {  
+                    <td>@course.Instructor</td>  
+                }  
+
+                <!-- Show enrollment status or actions -->  
                 <td>  
                     @if (userRole == "student")  
                     {  
-                        <span>@course.Instructor</span>  
-                    }  
-                    else if (userRole == "instructor" && course.Students?.Any() == true)  
-                    {  
-                        <ul>  
-                            @foreach (var student in course.Students)  
-                            {  
-                                <li>@student.Username</li>  
-                            }  
-                        </ul>  
+                        @if (course.IsEnrolled)  
+                        {  
+                            <span style="color: green;">Enrolled</span>  
+                        }  
+                        else  
+                        {  
+                            <form method="post" action="/Student/Enroll">  
+                                <input type="hidden" name="CourseId" value="@course.Id" />  
+                                <button class="btn btn-primary btn-sm" type="submit">Enroll</button>  
+                            </form>  
+                        }  
                     }  
                     else if (userRole == "instructor")  
                     {  
-                        <span>No students enrolled</span>  
+                        <a href="@Url.Action("View", "Instructor", new { id = course.Id })">  
+                            <button type="button" class="btn btn-primary btn-sm">View</button>  
+                        </a>  
                     }  
                 </td>  
 
