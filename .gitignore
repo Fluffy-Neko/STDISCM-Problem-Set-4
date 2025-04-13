@@ -6,3 +6,4 @@ appsettings.json
 *.pdb
 *.exe
 .vs/*
+/.vs/VSWorkspaceState.json
