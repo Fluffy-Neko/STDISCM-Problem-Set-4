@@ -36,12 +36,13 @@ namespace BasicFacilitiesNode.Controllers
             {
                 var courses = await _context.Courses.ToListAsync();
                 var enrollments = await _context.Enrollments.Where(e => e.StudentId == userId).ToListAsync();
+                var courseEnrollments = await _context.Enrollments.ToListAsync();
                 var instructorIds = courses.Select(c => c.InstructorId).Distinct().ToList();
                 var instructors = await _context.Users.Where(u => instructorIds.Contains(u.Id)).ToListAsync();
 
                 viewModel.Courses = courses.Select(course =>
                 {
-                    var courseEnrollments = enrollments.Where(e => e.CourseId == course.Id).ToList();
+                    var slotsTaken = courseEnrollments.Where(e => e.CourseId == course.Id).ToList().Count;
                     var instructor = instructors.FirstOrDefault(i => i.Id == course.InstructorId);
 
                     return new CourseViewModel
@@ -50,10 +51,10 @@ namespace BasicFacilitiesNode.Controllers
                         CourseCode = course.CourseCode,
                         Units = course.Units,
                         Capacity = course.Capacity,
-                        SlotsTaken = courseEnrollments.Count(),
+                        SlotsTaken = slotsTaken,
                         IsEnrolled = enrollments.Any(e => e.CourseId == course.Id),
-                        isFull = courseEnrollments.Count() >= course.Capacity,
-                        Instructor = instructor?.Username ?? "Unknown",
+                        isFull = slotsTaken >= course.Capacity,
+                        Instructor = instructor?.Username ?? "Unknown"
                     };
                 }).ToList();
             }
@@ -78,7 +79,6 @@ namespace BasicFacilitiesNode.Controllers
                 viewModel.Courses = courses.Select(course =>
                 {
                     var courseEnrollments = enrollments.Where(e => e.CourseId == course.Id).ToList();
-
                     var courseStudents = students
                         .Where(s => courseEnrollments.Select(e => e.StudentId).Contains(s.Id))
                         .Select(s => new UserViewModel

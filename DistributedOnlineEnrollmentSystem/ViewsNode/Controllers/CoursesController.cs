@@ -47,6 +47,8 @@ namespace ViewsNode.Controllers
             var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
             var viewModel = JsonSerializer.Deserialize<CourseListViewModel>(json, options);
             var debugJson = JsonSerializer.Serialize(viewModel, new JsonSerializerOptions { WriteIndented = true });
+
+            Console.WriteLine(json);
  
             ViewBag.UserRole = role;
             return View(viewModel);

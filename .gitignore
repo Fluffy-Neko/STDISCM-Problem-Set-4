@@ -5,4 +5,4 @@ appsettings.json
 *.dll
 *.pdb
 *.exe
-.vs/
+.vs/*
